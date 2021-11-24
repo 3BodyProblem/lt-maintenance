@@ -3,6 +3,11 @@
 
 	export Mysql databases settings for Service course-discovery.
 
+
+	Usage:
+
+		Command: `python -m export_discovery_settings`
+
 """
 
 from django.core.exceptions import ValidationError
