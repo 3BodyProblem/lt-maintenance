@@ -3,6 +3,7 @@
 """
 
 from os.path import join as path_join
+from traceback import format_exc
 
 from paramiko import (
     AutoAddPolicy,
@@ -18,7 +19,12 @@ class _Mysql_Setting(object):
         self._mysql_connection_string = mysql_connection_string
 
     def __str__(self):
-        return 'mysql parameters...'
+        return self._mysql_connection_string
+
+    @property
+    def connection_string(self):
+        """Return mysql connection string WITHOUT password"""
+        return self._mysql_connection_string
 
     @classmethod
     def parse(cls, connection_string):
@@ -26,6 +32,9 @@ class _Mysql_Setting(object):
 
             @param connection_string:   `sudo mysql learning-abbott_edxapp -u learning-abbott_admin -p -h platform.eu-west-1.rds.amazonaws.com`
             @type connection_string:    string
+            @return:                    New Instance
+            @rtype:                     _Mysql_Setting
+
         """
         if not connection_string:
             raise ValueError(r'invalid mysql settings : {}'.format(connection_string))
@@ -59,6 +68,9 @@ class _SSL_Client(object):
 
             @param connection_string:   `ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.249.4.219`
             @type connection_string:    string
+            @return:                    New Instance
+            @rtype:                     _SSL_Client
+
         """
         if not connection_string:
             raise ValueError(r'invalid ssl settings : {}'.format(connection_string))
@@ -99,11 +111,29 @@ class _SSL_Client(object):
 
         return new_conn_obj
 
+    @property
+    def session(self):
+        """Return ssl connection obj."""
+        if not self.__ssl_connection:
+            self.__ssl_connection = _SSL_Client.gen_ssl_connection(
+                self.__key_file_path,
+                self.__host,
+                self.__user_name
+            )
+        return self.__ssl_connection
+
     def release(self):
         """Release resources"""
-        if self.__ssl_connection:
-            self.__ssl_connection.close()
-            self.__ssl_connection = None
+        try:
+            if self.__ssl_connection:
+                self.__ssl_connection.close()
+                self.__ssl_connection = None
+
+            return True
+
+        except Exception:
+            print(r'[Exception occur while Releasing Resourses]: {err_msg}'.format(err_msg=format_exc()))
+            return False
 
 
 class _EC2Node(object):
@@ -135,6 +165,34 @@ class _EC2Node(object):
     def parse_mysql_connection(self, content):
         """Parse Mysql connection from string"""
         self._mysql_setting = _Mysql_Setting.parse(content)
+
+    @property
+    def ssl_session(self):
+        """Return ssl connection session."""
+        if not self._ssl_client:
+            return None
+
+        return self._ssl_client.session
+
+    @property
+    def mysql_interactive_command(self):
+        """Return mysql interative command line string"""
+        if not self._mysql_setting:
+            return None
+
+        return self._mysql_setting
+
+    def release(self):
+        """Release all resourses.
+
+            @return:        Return `True` if released all resourses.
+            @rtype:         boolean
+        """
+        _ssl_released = True
+        if self._ssl_client:
+            _ssl_released = self._ssl_client.release()
+
+        return _ssl_released
 
 
 class Nodes(object):
@@ -174,6 +232,17 @@ class Nodes(object):
         """Return item reference by index number"""
         return self._ec2node_table[item_index]
 
+    def __enter__(self):
+        """Return self handle of this instance."""
+        return self
+
+    def __exit__(self, exc_type, exc_val, exc_tb):
+        """Support content manager."""
+        print(r'[Releasing resouses (ssl / mysql)]')
+
+        for ec2node in self._ec2node_table:
+            ec2node.release()
+
     def __judge_line_type(self, content):
         """We could know the record content type according to the 'keywords' in string.
 
@@ -185,14 +254,15 @@ class Nodes(object):
         if len(content) < 1:
             return Nodes.LINETYPE_UNKNOW
 
-        lower_case_prefix_line = content[:10].lower()
-        if 'fr' in lower_case_prefix_line and '#' in lower_case_prefix_line and '>' in lower_case_prefix_line:
+        content = content.lower()
+
+        if '# fr >' in content and '#' in content and '>' in content:
             return Nodes.LINETYPE_FRENCH_NODE
-        elif 'us' in lower_case_prefix_line and '#' in lower_case_prefix_line and '>' in lower_case_prefix_line:
+        elif '# us >' in content and '#' in content and '>' in content:
             return Nodes.LINETYPE_AMERICA_NODE
-        elif 'ssh ' in lower_case_prefix_line and '-i ' in lower_case_prefix_line:
+        elif 'ssh ' in content and '-i ' in content:
             return Nodes.LINETYPE_SSH_SETTING
-        elif 'mysql ' in lower_case_prefix_line and '-u ' in lower_case_prefix_line:
+        elif 'mysql ' in content and '-u ' in content:
             return Nodes.LINETYPE_MYSQL_SETTING
 
     def __build_settings(self, conf_file):

@@ -5,8 +5,7 @@
 
 	[Usage]:
 
-		`python -m verify_analytics_last_days`
-		`python -m verify_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/`
+		`python -m verify_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...]`
 
 """
 
@@ -42,16 +41,31 @@ if __name__ == "__main__":
 		parser.add_argument(
 			'--cert_folder', default='', help="folder of ssl cert pem files.",
 		)
+		parser.add_argument(
+			'--fr_mysql_pswd', default=None, help="Mysql pswd of French Nodes",
+		)
+		parser.add_argument(
+			'--us_mysql_pswd', default=None, help="Mysql pswd of United States Nodes",
+		)
 		args = parser.parse_args()
 		if not path_exists(args.cert_folder):
 			raise ValidationError(
 				r'[Error] Invalid SSL Pem key folder: {}'.format(args.cert_folder)
 			)
+		if not args.fr_mysql_pswd or not args.us_mysql_pswd:
+			raise ValidationError(
+				r'[Error] Invalid MySql password of FR/US nodes: {} / {}'.format(
+					args.fr_mysql_pswd, args.us_mysql_pswd
+				)
+			)
 
-		# Execute
-		nodes_settings = Nodes(config_file_path, args.cert_folder)
-		verifier = Verification(nodes_settings)
-		verifier.execute()
+		# Execute verification
+		with Nodes(config_file_path, args.cert_folder) as ec2nodes:
+			Verification(
+				ec2nodes[:1],
+				args.fr_mysql_pswd,
+				args.us_mysql_pswd
+			).execute()
 
 		print(r'[DONE]')
 
