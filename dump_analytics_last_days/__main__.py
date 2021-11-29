@@ -5,7 +5,7 @@
 
 	[Usage]:
 
-		`python -m verify_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...]`
+		`python -m dump_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...]`
 
 """
 
