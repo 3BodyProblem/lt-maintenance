@@ -17,11 +17,11 @@ from traceback import format_exc
 
 class _MySqlCommander(object):
     """Mysql login & query commander wrapper class."""
+    INCREMENT_COUNT = 0
     SQL_QUERY_REPORTLOG = r'SELECT * FROM triboo_analytics_reportlog WHERE date(created)>="{}";'
 
     def __init__(self, node_name, ssl_session, mysql_connection_settings, login_password, since, dump_file):
-        print(r'[Verifing EC2 Node] ===> name: {}'.format(node_name))
-        self._echo_content = node_name + ' >>>>>>>>>>> \r\n'
+        self._echo_content = r'{} {}'.format(node_name, ' >>>>>>>>>>> \r\n')
         self._dump_file = dump_file
         self._node_name = node_name
         self._shell_session = ssl_session.invoke_shell()
@@ -30,6 +30,7 @@ class _MySqlCommander(object):
         self._ssl_stdout = None
         self._ssl_stderr = None
         self._since = since
+        self._login_flag = False
         self._login(login_password)
 
     def __enter__(self):
@@ -45,7 +46,8 @@ class _MySqlCommander(object):
 
     def _dump_echo_content(self):
         """Dump echo info. to local file."""
-        print(r'[DUMPING FILE] {}'.format(self._dump_file))
+        _MySqlCommander.INCREMENT_COUNT += 1
+        self._dump_file.write('=======> [{}] \r\n'.format(_MySqlCommander.INCREMENT_COUNT))
         self._dump_file.write(self._echo_content)
 
     def _sync_exe_command(self, cmd, raise_exc_flag=False):
@@ -63,7 +65,7 @@ class _MySqlCommander(object):
                 if self._shell_session.recv_ready():
                     return self._shell_session.recv(1024 * 1024 * 3)
 
-            raise ValueError(r'[TIMEOUT] : {}'.format(cmd))
+            raise ValueError(r'[Exception : TIMEOUT] : {}'.format(cmd))
 
         except Exception:
             self._append_echo_content(cmd)
@@ -77,18 +79,22 @@ class _MySqlCommander(object):
             @param login_password:      Mysql Login Password
             @type login_password:       string
         """
-        resp = self._sync_exe_command(
-            self._mysql_connection_settings.connection_string.replace(' -p ', ' -p{} '.format(login_password)),
-            raise_exc_flag=True
-        )
-        if r'mysql>' not in resp:
-            self._append_echo_content(resp)
-            raise ValueError(
-                r'[Login Exception] {} : {}'.format(
+        try:
+            resp = self._sync_exe_command(
+                self._mysql_connection_settings.connection_string.replace(' -p ', ' -p{} '.format(login_password)),
+                raise_exc_flag=True
+            )
+            if r'mysql>' not in resp:
+                exc_msg = r'[Login Exception] {} : {}'.format(
                     self._mysql_connection_settings.connection_string.replace(' -p ', ' -p{} '.format(login_password)),
                     resp
                 )
-            )
+                self._append_echo_content(exc_msg)
+                raise ValueError(exc_msg)
+
+            self._login_flag = True
+        except Exception:
+            pass
 
     def _logout(self):
         """Logout Mysql session"""
@@ -97,21 +103,26 @@ class _MySqlCommander(object):
             if 'Bye' not in resp:
                 raise ValueError('Failed to logout: {}'.format(resp))
         except Exception:
-            self._append_echo_content(format_exc())
-            print(r'[Exception occur while Logout]: {err_msg}'.format(err_msg=format_exc()))
+            exc_msg = r'[Exception occur while Logout] : {err_msg}'.format(err_msg=format_exc())
+            self._append_echo_content(exc_msg)
+            print(exc_msg)
 
     def _verify_analytics_by_date(self):
         """Verify analytics compiled correctly in the past days"""
         sql = _MySqlCommander.SQL_QUERY_REPORTLOG.format(self._since)
         resp = self._sync_exe_command(sql)
 
-        self._append_echo_content(resp)
         if 'modified' not in resp or 'learner_visit' not in resp or 'learner_course' not in resp:
-            raise ValueError(
-                r'[Query Exception] {} : {}'.format(sql, resp)
-            )
+            exc_msg = r'[Query Exception] {} : {}'.format(sql, resp)
+            self._append_echo_content(exc_msg)
+            raise ValueError(exc_msg)
+        else:
+            self._append_echo_content(resp)
 
     def execute(self):
+        if not self._login_flag:
+            return
+
         self._verify_analytics_by_date()
 
 
