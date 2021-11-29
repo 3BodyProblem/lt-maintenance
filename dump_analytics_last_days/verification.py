@@ -3,6 +3,14 @@
 
 """
 
+from gevent import (
+    joinall as join_all_threads,
+    spawn as spawn_thread
+)
+from os.path import (
+	dirname as file_dirname,
+    join as path_join
+)
 from time import sleep
 from traceback import format_exc
 
@@ -11,7 +19,11 @@ class _MySqlCommander(object):
     """Mysql login & query commander wrapper class."""
     SQL_QUERY_REPORTLOG = r'SELECT * FROM triboo_analytics_reportlog WHERE date(created)>="{}";'
 
-    def __init__(self, ssl_session, mysql_connection_settings, login_password, since):
+    def __init__(self, node_name, ssl_session, mysql_connection_settings, login_password, since, dump_file):
+        print(r'[Verifing EC2 Node] ===> name: {}'.format(node_name))
+        self._echo_content = node_name + ' >>>>>>>>>>> \r\n'
+        self._dump_file = dump_file
+        self._node_name = node_name
         self._shell_session = ssl_session.invoke_shell()
         self._mysql_connection_settings = mysql_connection_settings
         self._ssl_stdin = None
@@ -25,23 +37,39 @@ class _MySqlCommander(object):
 
     def __exit__(self, exc_type, exc_val, exc_tb):
         self._logout()
+        self._dump_echo_content()
 
-    def _sync_exe_command(self, cmd):
+    def _append_echo_content(self, content):
+        """Append echo string for dump file"""
+        self._echo_content += (content + '\r\n')
+
+    def _dump_echo_content(self):
+        """Dump echo info. to local file."""
+        print(r'[DUMPING FILE] {}'.format(self._dump_file))
+        self._dump_file.write(self._echo_content)
+
+    def _sync_exe_command(self, cmd, raise_exc_flag=False):
         """Execute & Return response of command
 
             @param cmd:                 command string for error message
             @type cmd:                  string
         """
-        self._shell_session.sendall(cmd + '\n')
-        sleep(1)
+        try:
+            self._shell_session.sendall(cmd + '\n')
 
-        for i in range(1, 60):
-            sleep(1)
+            for i in range(1, 60):
+                sleep(5)
 
-            if self._shell_session.recv_ready():
-                return self._shell_session.recv(1024 * 1024 * 3)
+                if self._shell_session.recv_ready():
+                    return self._shell_session.recv(1024 * 1024 * 3)
 
-        raise ValueError(r'[TIMEOUT] : {}'.format(cmd))
+            raise ValueError(r'[TIMEOUT] : {}'.format(cmd))
+
+        except Exception:
+            self._append_echo_content(cmd)
+            if raise_exc_flag:
+                raise
+            return format_exc()
 
     def _login(self, login_password):
         """Establish a Mysql Login Session
@@ -49,12 +77,12 @@ class _MySqlCommander(object):
             @param login_password:      Mysql Login Password
             @type login_password:       string
         """
-        print(r'[Login Mysql with command] {}'.format(self._mysql_connection_settings.connection_string))
-
         resp = self._sync_exe_command(
-            self._mysql_connection_settings.connection_string.replace(' -p ', ' -p{} '.format(login_password))
+            self._mysql_connection_settings.connection_string.replace(' -p ', ' -p{} '.format(login_password)),
+            raise_exc_flag=True
         )
         if r'mysql>' not in resp:
+            self._append_echo_content(resp)
             raise ValueError(
                 r'[Login Exception] {} : {}'.format(
                     self._mysql_connection_settings.connection_string.replace(' -p ', ' -p{} '.format(login_password)),
@@ -69,17 +97,19 @@ class _MySqlCommander(object):
             if 'Bye' not in resp:
                 raise ValueError('Failed to logout: {}'.format(resp))
         except Exception:
+            self._append_echo_content(format_exc())
             print(r'[Exception occur while Logout]: {err_msg}'.format(err_msg=format_exc()))
 
     def _verify_analytics_by_date(self):
         """Verify analytics compiled correctly in the past days"""
         sql = _MySqlCommander.SQL_QUERY_REPORTLOG.format(self._since)
         resp = self._sync_exe_command(sql)
+
+        self._append_echo_content(resp)
         if 'modified' not in resp or 'learner_visit' not in resp or 'learner_course' not in resp:
             raise ValueError(
                 r'[Query Exception] {} : {}'.format(sql, resp)
             )
-        print(resp)
 
     def execute(self):
         self._verify_analytics_by_date()
@@ -105,14 +135,34 @@ class Verification(object):
         self._us_mysql_pswd = us_mysql_pswd
         self._since = since
 
+    @property
+    def dump_file_path(self):
+        return path_join(
+            file_dirname(__file__),
+            'analytics_{}.dump'.format(self._since)
+        )
+
     def execute(self):
         """Execute verification for each EC2 Node."""
-        for node in self._ec2nodes:
-            print(r'[Verifing EC2 Node] ===> {}'.format(node))
-            with _MySqlCommander(
-                node.ssl_session,
-                node.mysql_interactive_command,
-                self._fr_mysql_pswd if node.type() == 1 else self._us_mysql_pswd,    # Choose Pswd by node Type
-                self._since
-            ) as cmd:
-                cmd.execute()
+        with open(self.dump_file_path, 'w') as dump_file:
+            theads_handles = []
+
+            print(r'[Echo Dump File] : {}'.format(self.dump_file_path))
+
+            def func_mysql_commander(node):
+                with _MySqlCommander(
+                    node.name(),
+                    node.ssl_session,
+                    node.mysql_interactive_command,
+                    self._fr_mysql_pswd if node.type() == 1 else self._us_mysql_pswd,    # Choose Pswd by node Type
+                    self._since,
+                    dump_file=dump_file
+                ) as cmd:
+                    cmd.execute()
+
+            for node in self._ec2nodes:
+                theads_handles.append(
+                    spawn_thread(func_mysql_commander, node)
+                )
+
+            join_all_threads(theads_handles)

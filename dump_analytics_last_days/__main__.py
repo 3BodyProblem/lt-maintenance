@@ -9,6 +9,9 @@
 
 """
 
+# *** We Patched all at the TOP line. ***
+from gevent import monkey; monkey.patch_all()
+
 from argparse import ArgumentParser
 from os.path import (
 	dirname as file_dirname,
