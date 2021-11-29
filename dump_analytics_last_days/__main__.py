@@ -3,6 +3,30 @@
 
 	A Simple tool of analytics status checking.
 
+	[Workflow]:
+		Input Args: `ssl cert folder` + `US / FR Mysql Password` + `since date`
+		Output: A SSL Shell Echo dump file (Sample `lt-maintenance/dump_analytics_last_days/analytics_2021-11-22.dump`)
+
+		1. Loading nodes SSL connection & Mysql settings from `conf/nodes.txt`. (Pls update the nodes.txt from `https://github.com/Learningtribes/delivery`)
+		2. Iterate & verify Mysql Table with SSL Shell One EC2 Node By One.
+		3. Dumping all of the echo content from Each Node Shell.
+		4. Then, user check the dump file (Sample: .../analytics_2021-11-22.dump) manually.
+			- Including Error/Exception for Each Node.
+			- Including Query Result of Mysql Table `triboo_analytics_reportlog` of Each Node.
+
+		Sample of dump file as follow:
+			# FR > Abbott >>>>>>>>>>>
+			SELECT * FROM triboo_analytics_reportlog WHERE date(created)>="2021-11-22 ^H";
+			+-----+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+
+			| id  | created                    | modified                   | learner_visit              | learner_course             | learner                    | course                     | microsite                  | country                    |
+			+-----+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+----------------------------+
+			| 119 | 2021-11-22 01:40:06.906722 | 2021-11-22 01:40:13.224861 | 2021-11-22 01:40:06.901095 | 2021-11-22 01:40:12.662131 | 2021-11-22 01:40:12.999630 | 2021-11-22 01:40:13.081538 | 2021-11-22 01:40:13.153081 | 2021-11-22 01:40:13.222970 |
+			| 120 | 2021-11-23 01:40:06.439054 | 2021-11-23 01:40:09.939896 | 2021-11-23 01:40:06.430946 | 2021-11-23 01:40:09.648886 | 2021-11-23 01:40:09.812521 | 2021-11-23 01:40:09.858002 | 2021-11-23 01:40:09.899777 | 2021-11-23 01:40:09.937358 |
+			| 121 | 2021-11-24 01:40:06.720530 | 2021-11-24 01:40:11.557364 | 2021-11-24 01:40:06.713794 | 2021-11-24 01:40:11.218092 | 2021-11-24 01:40:11.394345 | 2021-11-24 01:40:11.460681 | 2021-11-24 01:40:11.514731 | 2021-11-24 01:40:11.555625 |
+			...
+			...
+			...
+
 	[Usage]:
 
 		`python -m dump_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --since=2021-11-22`
