@@ -26,10 +26,13 @@
 			...
 			...
 			...
+		5. Releasing SSL handles & Mysql connections.
 
 	[Usage]:
 
-		`python -m dump_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --since=2021-11-22`
+		- `python -m dump_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --since=2021-11-22`
+		- Check Error Logs in Screen ( Some Node may got failure because of Unstable SSL connection )
+		- Check dump file: dump_analytics_last_days/analytics_2021-aa-bb.dump
 
 """
 
@@ -94,7 +97,7 @@ if __name__ == "__main__":
 		# Execute verification
 		with Nodes(config_file_path, args.cert_folder) as ec2nodes:
 			Verification(
-				ec2nodes[:1],
+				ec2nodes,
 				args.fr_mysql_pswd,
 				args.us_mysql_pswd,
 				args.since
