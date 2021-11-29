@@ -5,7 +5,7 @@
 
 	[Usage]:
 
-		`python -m dump_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...]`
+		`python -m dump_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --since=2021-11-22`
 
 """
 
@@ -39,13 +39,16 @@ if __name__ == "__main__":
 		# Parsing arguments
 		parser = ArgumentParser(description=r'A Simple tool of analytics status checking.')
 		parser.add_argument(
-			'--cert_folder', default='', help="folder of ssl cert pem files.",
+			'--cert_folder', default='', help='folder of ssl cert pem files.'
 		)
 		parser.add_argument(
-			'--fr_mysql_pswd', default=None, help="Mysql pswd of French Nodes",
+			'--fr_mysql_pswd', default=None, help='Mysql pswd of French Nodes'
 		)
 		parser.add_argument(
-			'--us_mysql_pswd', default=None, help="Mysql pswd of United States Nodes",
+			'--us_mysql_pswd', default=None, help='Mysql pswd of United States Nodes'
+		)
+		parser.add_argument(
+			'--since', default=None, help='The first date for dumping'
 		)
 		args = parser.parse_args()
 		if not path_exists(args.cert_folder):
@@ -58,13 +61,16 @@ if __name__ == "__main__":
 					args.fr_mysql_pswd, args.us_mysql_pswd
 				)
 			)
+		if not args.since:
+			raise ValidationError(r'[Error] Pls specify `first checking date` with `--since=...` ')
 
 		# Execute verification
 		with Nodes(config_file_path, args.cert_folder) as ec2nodes:
 			Verification(
 				ec2nodes[:1],
 				args.fr_mysql_pswd,
-				args.us_mysql_pswd
+				args.us_mysql_pswd,
+				args.since
 			).execute()
 
 		print(r'[DONE]')
