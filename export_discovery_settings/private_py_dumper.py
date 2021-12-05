@@ -1,4 +1,3 @@
-from django.core.exceptions import ValidationError
 from json import load as load_json_file
 from os.path import (
     basename,
@@ -51,11 +50,11 @@ class FilePrivatePyDumper(object):
         )
 
         if not file_exists(self._node_config_file):
-            raise ValidationError(
+            raise Exception(
                 r'[Error] file ({missed_file}) does not exist.'.format(missed_file=self._node_config_file)
             )
         if not isfile(self._node_config_file):
-            raise ValidationError(
+            raise Exception(
                 r'[Error] invalid file: {invalid_file}.'.format(invalid_file=self._node_config_file)
             )
 

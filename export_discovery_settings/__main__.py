@@ -10,7 +10,6 @@
 
 """
 
-from django.core.exceptions import ValidationError
 from os import listdir
 from os.path import (
 	dirname as file_dirname,
@@ -32,7 +31,7 @@ if __name__ == "__main__":
 		print(r'[Root Folder]: {config_dir}'.format(config_dir=config_root))
 
 		if not path_exists(config_root):
-			raise ValidationError(
+			raise Exception(
 				r'[Error] Invalid config dir: {}'.format(config_root)
 			)
 

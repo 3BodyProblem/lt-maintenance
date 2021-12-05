@@ -48,8 +48,6 @@ from os.path import (
 from sys import exit as process_terminate
 from traceback import format_exc
 
-from django.core.exceptions import ValidationError
-
 from nodes_table import Nodes
 from verification import Verification
 
@@ -62,7 +60,7 @@ if __name__ == "__main__":
 		print(r'[Config file path]: {file_path}'.format(file_path=config_file_path))
 
 		if not path_exists(config_file_path):
-			raise ValidationError(
+			raise Exception(
 				r'[Error] Invalid config file path: {}'.format(config_file_path)
 			)
 
@@ -82,17 +80,17 @@ if __name__ == "__main__":
 		)
 		args = parser.parse_args()
 		if not path_exists(args.cert_folder):
-			raise ValidationError(
+			raise Exception(
 				r'[Error] Invalid SSL Pem key folder: {}'.format(args.cert_folder)
 			)
 		if not args.fr_mysql_pswd or not args.us_mysql_pswd:
-			raise ValidationError(
+			raise Exception(
 				r'[Error] Invalid MySql password of FR/US nodes: {} / {}'.format(
 					args.fr_mysql_pswd, args.us_mysql_pswd
 				)
 			)
 		if not args.since:
-			raise ValidationError(r'[Error] Pls specify `first checking date` with `--since=...` ')
+			raise Exception(r'[Error] Pls specify `first checking date` with `--since=...` ')
 
 		# Execute verification
 		with Nodes(config_file_path, args.cert_folder) as ec2nodes:
