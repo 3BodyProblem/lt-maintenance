@@ -186,6 +186,10 @@ sudo mysql learning-sitelacademy_edxapp -u learning-sitelacademy_admin -p -h pla
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.209.50.203
 sudo mysql learning-udv_edxapp -u learning-udv_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
+# US > Griky - SURA
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.229.11.20
+sudo mysql learning-sura_edxapp -u learning-sura_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
 # US > Griky - Unid
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@174.129.44.242
 sudo mysql learning-unid_edxapp -u learning-unid_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
