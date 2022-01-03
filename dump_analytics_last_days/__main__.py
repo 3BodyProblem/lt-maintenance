@@ -37,6 +37,7 @@
 """
 
 # *** We Patched all at the TOP line. ***
+from gevent.pool import Pool
 from gevent import monkey; monkey.patch_all()
 
 from argparse import ArgumentParser

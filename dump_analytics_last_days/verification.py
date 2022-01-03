@@ -60,7 +60,7 @@ class _MySqlCommander(object):
             self._shell_session.sendall(cmd + '\n')
 
             for i in range(1, 60):
-                sleep(5)
+                sleep(3)
 
                 if self._shell_session.recv_ready():
                     return self._shell_session.recv(1024 * 1024 * 3)
@@ -172,8 +172,10 @@ class Verification(object):
                     cmd.execute()
 
             for node in self._ec2nodes:
+                sleep(2)
                 theads_handles.append(
                     spawn_thread(func_mysql_commander, node)
                 )
+                node.release()
 
             join_all_threads(theads_handles)
