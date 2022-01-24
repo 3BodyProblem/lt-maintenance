@@ -74,12 +74,8 @@ sudo mysql learning-recrealire_edxapp -u learning-recrealire_admin -p -h platfor
 ssh -i azure.pem -o ServerAliveInterval=45 ubuntu@20.56.114.19
 sudo mysql learning-azuresephoraprod_edxapp -u learning-azuresephoraprod_admin@sephora-mysql-prod -p -h sephora-mysql-prod.mysql.database.azure.com
 
-# FR > Total MOOC
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.249.0.247
-sudo mysql learning-total-mooc_edxapp -u learning-total-mooc_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > Total Uganda
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.250.145.117
+ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.155.237.55
 sudo mysql learning-total-uganda_edxapp -u learning-total-uganda_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # FR > Verisure
@@ -95,11 +91,11 @@ ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.212.106.25
 sudo mysql learning-beta_edxapp -u learning-beta_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # US > Griky - Astrazeneca
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.229.134.137
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.227.55.68
 sudo mysql learning-astrazeneca_edxapp -u learning-astrazeneca_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Autonoma
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.175.101.106
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.175.209.218
 sudo mysql learning-autonoma_edxapp -u learning-autonoma_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Bath & Body Works
