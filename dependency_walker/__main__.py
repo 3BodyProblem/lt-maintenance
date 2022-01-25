@@ -13,6 +13,12 @@
 			raise VersionConflict(dist, req).with_context(dependent_req)
 		VersionConflict: (six 1.11.0 (/edx/app/edxapp/venvs/edxapp/lib/python2.7/site-packages), Requirement.parse('six==1.12.0'))
 
+
+	Another Way:
+		root@24d914602ec3:/edx/app/edxapp/edx-platform# pip check cryptography==3.3.2
+			==> slackclient 1.3.2 has requirement requests<3.0a0,>=2.11, but you have requests 2.9.1.
+			==> cryptography 3.3.2 has requirement cffi>=1.12, but you have cffi 1.11.5.
+
 """
 
 from argparse import ArgumentParser
@@ -38,11 +44,19 @@ if __name__ == "__main__":
 				r'[Error] Invalid path of requirements.txt: {}'.format(args.requirements)
 			)
 
+		print('[PROCESSING] message would be ignored if string `-e ` or `git+https:` exist in message.')
 		with open(args.requirements, 'r') as req_file:
+			libraries = filter(
+				lambda line: '-e ' not in line and 'git+https:' not in line,
+				iter(pkgr.yield_lines(req_file))
+			)
+
 			requirements = [
 				r'{}{}'.format(py_lib.name, py_lib.specifier)
-				for py_lib in pkgr.parse_requirements(req_file)
+				for py_lib in pkgr.parse_requirements(libraries)
 			]
+			for r in requirements:
+				print(r)
 			pkgr.require(requirements)
 
 		print(r'[DONE]')
