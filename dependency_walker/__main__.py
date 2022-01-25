@@ -50,13 +50,11 @@ if __name__ == "__main__":
 				lambda line: '-e ' not in line and 'git+https:' not in line,
 				iter(pkgr.yield_lines(req_file))
 			)
-
 			requirements = [
 				r'{}{}'.format(py_lib.name, py_lib.specifier)
 				for py_lib in pkgr.parse_requirements(libraries)
 			]
-			for r in requirements:
-				print(r)
+
 			pkgr.require(requirements)
 
 		print(r'[DONE]')
