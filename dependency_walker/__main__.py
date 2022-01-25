@@ -38,6 +38,9 @@ if __name__ == "__main__":
 		parser.add_argument(
 			'--requirements', default='', help='path of requirements.txt'
 		)
+		parser.add_argument(
+			'--blacklist', default='argparse', help='blacklist of excluding libraries (separated by comma)'
+		)
 		args = parser.parse_args()
 		if not path_exists(args.requirements) or not isfile(args.requirements):
 			raise Exception(
@@ -50,9 +53,12 @@ if __name__ == "__main__":
 				lambda line: '-e ' not in line and 'git+https:' not in line,
 				iter(pkgr.yield_lines(req_file))
 			)
+
+			blacklist = args.blacklist.split(',')
 			requirements = [
 				r'{}{}'.format(py_lib.name, py_lib.specifier)
 				for py_lib in pkgr.parse_requirements(libraries)
+				if py_lib.name not in blacklist
 			]
 
 			pkgr.require(requirements)
