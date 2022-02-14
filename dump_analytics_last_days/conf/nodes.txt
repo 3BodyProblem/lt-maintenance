@@ -38,10 +38,6 @@ sudo mysql learning-form-edit_edxapp -u learning-form-edit_admin -p -h platform-
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.213.224.223
 sudo mysql learning-garantie-privee_edxapp -u learning-garantie-privee_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
-# FR > ImpfHotline
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.78.52.39
-sudo mysql learning-impfhotline_edxapp -u learning-impfhotline_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > Joyson
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.244.235.188
 sudo mysql learning-joyson_edxapp -u learning-joyson_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
@@ -170,10 +166,6 @@ sudo mysql learning-ocf_edxapp -u learning-ocf_admin -p -h platform-rds-cluster.
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.90.62.152
 sudo mysql learning-grikyfour_edxapp -u learning-grikyfour_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US > Sitel - Monat
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.90.59.224
-sudo mysql learning-monat_edxapp -u learning-monat_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
 # US > Sitel - MyAcademy
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.54.2.165
 sudo mysql learning-myacademy_edxapp -u learning-myacademy_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
@@ -187,7 +179,7 @@ ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.209.50.203
 sudo mysql learning-udv_edxapp -u learning-udv_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 US > Griky - UMA
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@35.173.129.132
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.242.48.241
 sudo mysql learning-uma_edxapp -u learning-uma_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 US > Griky - UMECIT
