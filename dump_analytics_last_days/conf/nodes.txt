@@ -71,7 +71,7 @@ ssh -i azure.pem -o ServerAliveInterval=45 ubuntu@20.56.114.19
 sudo mysql learning-azuresephoraprod_edxapp -u learning-azuresephoraprod_admin@sephora-mysql-prod -p -h sephora-mysql-prod.mysql.database.azure.com
 
 # FR > Total Uganda
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.155.237.55
+ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.245.37.140
 sudo mysql learning-total-uganda_edxapp -u learning-total-uganda_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # FR > Verisure
@@ -205,4 +205,3 @@ sudo mysql learning-usaa_edxapp -u learning-usaa_admin -p -h platform-rds-cluste
 # US > Griky - USAP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.160.181.35
 sudo mysql learning-usap_edxapp -u learning-usap_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
