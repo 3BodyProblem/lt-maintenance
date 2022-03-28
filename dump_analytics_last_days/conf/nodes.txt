@@ -10,10 +10,6 @@ sudo mysql learning-accor_edxapp -u learning-accor_admin -p -h platform-rds-clus
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.154.26.131
 sudo mysql learning-truebesson_edxapp -u learning-truebesson_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
-# FR > BGE
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.250.120.145
-sudo mysql learning-besson_edxapp -u learning-besson_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > BPCE
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.243.52.164
 sudo mysql learning-bpce_edxapp -u learning-bpce_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
@@ -103,7 +99,7 @@ ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.91.92.169
 sudo mysql learning-tecminuto_edxapp -u learning-tecminuto_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Class Run
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.229.123.138
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.226.236.4
 sudo mysql learning-classrun_edxapp -u learning-classrun_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Corona
@@ -137,6 +133,10 @@ sudo mysql learning-grikyfive_edxapp -u learning-grikyfive_admin -p -h platform-
 # US > Griky - Griky 6
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@35.175.186.245
 sudo mysql learning-grikysix_edxapp -u learning-grikysix_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+# US > Griky - HolaStaff
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.146.225.171
+sudo mysql learning-hola-staff_edxapp -u learning-hola-staff_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - ISTTE
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.215.175.102
@@ -179,7 +179,7 @@ ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.209.50.203
 sudo mysql learning-udv_edxapp -u learning-udv_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 US > Griky - UMA
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.242.48.241
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.91.171.87
 sudo mysql learning-uma_edxapp -u learning-uma_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 US > Griky - UMECIT
