@@ -33,13 +33,13 @@ class JiraSheetSeeker(object):
             if not self._records:
                 return None
 
-            return ','.join((p[0] for p in self._records))
+            return r'{};{}'.format(';'.join((p[0] for p in self._records)), ';'.join((p[1] for p in self._records)))
 
         def format_output(self):
             if not self._records:
                 return ''
 
-            return r'KEYs={}'.format(','.join((p[0] for p in self._records)))
+            return r'KEYs={}'.format(';'.join((p[0] for p in self._records)))
 
     def __init__(self, KEYs, ASSIGNEEs, STATUSs, DESCRIPTIONs):
         if len(KEYs) != len(ASSIGNEEs) or len(ASSIGNEEs) != len(STATUSs) or len(KEYs) != len(DESCRIPTIONs):
@@ -110,7 +110,7 @@ def __lets_analyze(sheet_P, sheet_Jira, output, echo_number):
         for P_ID in sheet_P_IDs:
             new_csv_line = jira_seeker.find_data_by_P_ID(P_ID).generate_CSV_line()
             if new_csv_line:
-                target.write('{};{}\n'.format(P_ID, new_csv_line))
+                target.write('{},"{}"\n'.format(P_ID, new_csv_line))
 
 
 if __name__ == "__main__":
