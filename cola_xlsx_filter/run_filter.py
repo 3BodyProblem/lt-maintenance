@@ -103,13 +103,14 @@ def __lets_analyze(sheet_P, sheet_Jira, output, echo_number):
             print(r'{}. P_ID={};{}'.format(i, P_ID, jira_seeker.find_data_by_P_ID(P_ID).format_output()))
     if echo_number > 0:
         _peek_4_debug()
+        return
 
     # Dump to local
     with open(output, 'w') as target:
         for P_ID in sheet_P_IDs:
             new_csv_line = jira_seeker.find_data_by_P_ID(P_ID).generate_CSV_line()
             if new_csv_line:
-                target.write(r'{};{}'.format(P_ID, new_csv_line))
+                target.write('{};{}\n'.format(P_ID, new_csv_line))
 
 
 if __name__ == "__main__":
@@ -149,4 +150,3 @@ if __name__ == "__main__":
     except Exception:
         print(r'[Exception]: {err_msg}'.format(err_msg=format_exc()))
         process_terminate(10)
-
