@@ -76,8 +76,7 @@ if __name__ == "__main__":
 			'--us_mysql_pswd', default=None, help='Mysql pswd of United States Nodes'
 		)
 		parser.add_argument(
-			'--policy_name',
-			required=True,
+			'--policy_name', required=True,
 			choices=policy_manager.supported_policies,
 			help='Pls, Specified a policy name'
 		)
@@ -99,7 +98,7 @@ if __name__ == "__main__":
 				ec2nodes,
 				args.fr_mysql_pswd,
 				args.us_mysql_pswd,
-				policy_manager.get_policy_obj_by_name(parser.policy_name)
+				policy_manager.get_policy_obj_by_name(args.policy_name)
 			).execute()
 
 		print(r'[DONE]')

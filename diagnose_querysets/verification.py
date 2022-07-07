@@ -10,6 +10,7 @@ from os.path import (
 )
 from time import sleep
 from traceback import format_exc
+from nodes_table import Nodes
 
 
 class _MySqlCommander(object):
@@ -152,14 +153,18 @@ class Verification(object):
     def execute(self):
         """Execute verification for each EC2 Node."""
         with open(self.dump_file_path, 'w') as dump_file:
-            theads_handles = []
-
             print(r'[Echo Dump File] : {}'.format(self.dump_file_path))
 
-            def func_mysql_commander(node):
+            for node in self._ec2nodes:
+                sleep(2)
+
+                if node.type() == Nodes.LINETYPE_FRENCH_NODE and not self._fr_mysql_pswd:
+                    continue
+                if node.type() == Nodes.LINETYPE_AMERICA_NODE and not self._us_mysql_pswd:
+                    continue
+
                 with _MySqlCommander(
-                    node.name(),
-                    node.ssl_session,
+                    node.name(), node.ssl_session,
                     node.mysql_interactive_command,
                     self._fr_mysql_pswd if node.type() == 1 else self._us_mysql_pswd,    # Choose Pswd by node Type
                     self._policy_obj.as_sql(),
@@ -167,11 +172,4 @@ class Verification(object):
                 ) as cmd:
                     cmd.execute()
 
-            for node in self._ec2nodes:
-                sleep(2)
-                theads_handles.append(
-                    spawn_thread(func_mysql_commander, node)
-                )
                 node.release()
-
-            join_all_threads(theads_handles)

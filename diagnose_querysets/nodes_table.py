@@ -141,7 +141,7 @@ class _EC2Node(object):
     def __init__(self, name, type, cert_folder):
         """Construct & hold instance config for a site node
         """
-        if type not in (1, 2):
+        if type not in (Nodes.LINETYPE_FRENCH_NODE, Nodes.LINETYPE_AMERICA_NODE):
             raise ValueError(r'[Error] Invalie node type : {}'.format(type))
 
         self._name = name.replace('\n', '').replace('\r', '')
