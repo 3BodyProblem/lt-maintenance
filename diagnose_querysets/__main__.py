@@ -31,7 +31,7 @@
 	[Usage]:
 
 		- `python -m diagnose_querysets --help`
-		- `python -m diagnose_querysets --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --policy_name=???????`
+		- `python -m diagnose_querysets --cert_folder=/Users/barrypaneer/.ssh/ --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --policy_name=???????`
 		   - Check Error Logs in Screen ( Some Node may got failure because of Unstable SSL connection )
 		   - Check dump file: dump_analytics_last_days/analytics_2021-aa-bb.dump
 

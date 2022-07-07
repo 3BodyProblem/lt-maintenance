@@ -83,3 +83,12 @@ class _QueryPolicyInterface(object):
             @rtype:         string
         """
         raise NotImplementedError
+
+    @abstractmethod
+    def mysql_response_validator(self):
+        """Validate mysql response, raise Exception `ValueError` while got invalid response from Mysql Sql
+
+            @return:        None, if no exception occured
+            @rtupe          string or None
+        """
+        raise NotImplementedError

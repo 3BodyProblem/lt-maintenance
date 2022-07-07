@@ -18,7 +18,7 @@ class _MySqlCommander(object):
     INCREMENT_COUNT = 0
     SQL_QUERY_REPORTLOG = r'SELECT * FROM triboo_analytics_reportlog WHERE date(created)>="{}";'
 
-    def __init__(self, node_name, ssl_session, mysql_connection_settings, login_password, query_sql, dump_file):
+    def __init__(self, node_name, ssl_session, mysql_connection_settings, login_password, query_sql, mysql_response_validator, dump_file):
         self._echo_content = r'{} {}'.format(node_name, ' >>>>>>>>>>> \r\n')
         self._dump_file = dump_file
         self._node_name = node_name
@@ -28,6 +28,7 @@ class _MySqlCommander(object):
         self._ssl_stdout = None
         self._ssl_stderr = None
         self._query_sql = query_sql
+        self._mysql_response_validator = mysql_response_validator
         self._login_flag = False
         self._login(login_password)
 
@@ -107,13 +108,11 @@ class _MySqlCommander(object):
 
     def _verify_analytics_by_date(self):
         """Verify analytics compiled correctly in the past days"""
-        # sql = _MySqlCommander.SQL_QUERY_REPORTLOG.format(self._since)
         resp = self._sync_exe_command(self._query_sql)
 
-        if 'modified' not in resp or 'learner_visit' not in resp or 'learner_course' not in resp:
-            exc_msg = r'[Query Exception] {} : {}'.format(self._query_sql, resp)
-            self._append_echo_content(exc_msg)
-            raise ValueError(exc_msg)
+        err_msg = self._mysql_response_validator(resp)
+        if err_msg:
+            self._append_echo_content(err_msg)
         else:
             self._append_echo_content(resp)
 
@@ -166,8 +165,9 @@ class Verification(object):
                 with _MySqlCommander(
                     node.name(), node.ssl_session,
                     node.mysql_interactive_command,
-                    self._fr_mysql_pswd if node.type() == 1 else self._us_mysql_pswd,    # Choose Pswd by node Type
+                    self._fr_mysql_pswd if node.type() == Nodes.LINETYPE_FRENCH_NODE else self._us_mysql_pswd,# Choose Pswd by node Type
                     self._policy_obj.as_sql(),
+                    self._policy_obj.mysql_response_validator,
                     dump_file=dump_file
                 ) as cmd:
                     cmd.execute()
