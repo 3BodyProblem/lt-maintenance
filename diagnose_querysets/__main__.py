@@ -1,5 +1,5 @@
 """
-	The Entry of module.
+	The entry of module.
 
 	A Simple tool of analytics status checking.
 
@@ -30,15 +30,13 @@
 
 	[Usage]:
 
-		- `python -m dump_analytics_last_days --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --since=2021-11-22`
-		- Check Error Logs in Screen ( Some Node may got failure because of Unstable SSL connection )
-		- Check dump file: dump_analytics_last_days/analytics_2021-aa-bb.dump
+		- `python -m diagnose_querysets --help`
+		- `python -m diagnose_querysets --cert_folder=/Users/barrypaneer/.ssh/  --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --policy_name=???????`
+		   - Check Error Logs in Screen ( Some Node may got failure because of Unstable SSL connection )
+		   - Check dump file: dump_analytics_last_days/analytics_2021-aa-bb.dump
 
 """
 
-# *** We Patched all at the TOP line. ***
-#from gevent.pool import Pool
-#from gevent import monkey; monkey.patch_all()
 
 from argparse import ArgumentParser
 from os.path import (
@@ -50,12 +48,13 @@ from sys import exit as process_terminate
 from traceback import format_exc
 
 from nodes_table import Nodes
+from query_policy import policy_manager
 from verification import Verification
 
 
 if __name__ == "__main__":
 	try:
-		# Checking local configuration
+		# 1. Checking local configuration
 		SUBPATH_OF_SETTINGS = r'conf/nodes.txt'
 		config_file_path = path_join(file_dirname(__file__), SUBPATH_OF_SETTINGS)
 		print(r'[Config file path]: {file_path}'.format(file_path=config_file_path))
@@ -65,10 +64,10 @@ if __name__ == "__main__":
 				r'[Error] Invalid config file path: {}'.format(config_file_path)
 			)
 
-		# Parsing arguments
-		parser = ArgumentParser(description=r'A Simple tool of analytics status checking.')
+		# 2. Parsing arguments
+		parser = ArgumentParser(description=r'A Simple tool of Mysql tables tables checking.')
 		parser.add_argument(
-			'--cert_folder', default='', help='folder of ssl cert pem files.'
+			'--cert_folder', required=True, default='', help='folder of ssl cert pem files.'
 		)
 		parser.add_argument(
 			'--fr_mysql_pswd', default=None, help='Mysql pswd of French Nodes'
@@ -77,29 +76,30 @@ if __name__ == "__main__":
 			'--us_mysql_pswd', default=None, help='Mysql pswd of United States Nodes'
 		)
 		parser.add_argument(
-			'--since', default=None, help='The first date for dumping'
+			'--policy_name',
+			required=True,
+			choices=policy_manager.supported_policies,
+			help='Pls, Specified a policy name'
 		)
 		args = parser.parse_args()
 		if not path_exists(args.cert_folder):
 			raise Exception(
 				r'[Error] Invalid SSL Pem key folder: {}'.format(args.cert_folder)
 			)
-		if not args.fr_mysql_pswd or not args.us_mysql_pswd:
+		if not args.fr_mysql_pswd and not args.us_mysql_pswd:
 			raise Exception(
-				r'[Error] Invalid MySql password of FR/US nodes: {} / {}'.format(
+				r'[Error] Invalid MySql password of FR & US nodes: {} / {}'.format(
 					args.fr_mysql_pswd, args.us_mysql_pswd
 				)
 			)
-		if not args.since:
-			raise Exception(r'[Error] Pls specify `first checking date` with `--since=...` ')
 
-		# Execute verification
+		# 3. Execute verification
 		with Nodes(config_file_path, args.cert_folder) as ec2nodes:
 			Verification(
 				ec2nodes,
 				args.fr_mysql_pswd,
 				args.us_mysql_pswd,
-				args.since
+				policy_manager.get_policy_obj_by_name(parser.policy_name)
 			).execute()
 
 		print(r'[DONE]')
