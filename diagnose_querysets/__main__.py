@@ -4,9 +4,6 @@
 	A Simple tool of analytics status checking.
 
 	[Workflow]:
-		Input Args: `ssl cert folder` + `US / FR Mysql Password` + `since date`
-		Output: A SSL Shell Echo dump file (Sample `lt-maintenance/dump_analytics_last_days/analytics_2021-11-22.dump`)
-
 		1. Loading nodes SSL connection & Mysql settings from `conf/nodes.txt`. (Pls update the nodes.txt from `https://github.com/Learningtribes/delivery`)
 		2. Iterate & verify Mysql Table with SSL Shell One EC2 Node By One.
 		3. Dumping all of the echo content from Each Node Shell.
@@ -29,11 +26,7 @@
 		5. Releasing SSL handles & Mysql connections.
 
 	[Usage]:
-
-		- `python -m diagnose_querysets --help`
-		- `python -m diagnose_querysets --cert_folder=/Users/barrypaneer/.ssh/ --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --policy_name=???????`
-		   - Check Error Logs in Screen ( Some Node may got failure because of Unstable SSL connection )
-		   - Check dump file: dump_analytics_last_days/analytics_2021-aa-bb.dump
+		 - File README.md
 
 """
 

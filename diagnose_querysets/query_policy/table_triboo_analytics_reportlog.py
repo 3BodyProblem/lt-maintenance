@@ -11,6 +11,7 @@ class _TribooAnalyticsReportLogQureyPolicy(_QueryPolicyInterface):
             policy_name='triboo_analytics_reportlog',
             policy_obj=self
         )
+        self._since_date = None
 
     def mysql_response_validator(self, resp_of_my_sql):
         if 'modified' not in resp_of_my_sql or 'learner_visit' not in resp_of_my_sql or 'learner_course' not in resp_of_my_sql:
@@ -18,8 +19,14 @@ class _TribooAnalyticsReportLogQureyPolicy(_QueryPolicyInterface):
             print(exc_msg)
             return exc_msg
 
-    def as_sql(self):
-        since_date = raw_input(
-            r'Please Enter Datetime for SQL "{}" : '.format(self.QUERY_SQL)
+    def on_prepare(self):
+        self._since_date = raw_input(
+            r'Please Enter Datetime for SQL "{}" <--- [YYYY-MM-dd] :'.format(self.QUERY_SQL)
         )
-        return self.QUERY_SQL.format(since_date)
+        if not self._since_date:
+            raise ValueError(r'[Exception] Empty date, pls input a valid datetime')
+
+        print(r'[Query SQL] ==> {}'.format(self.as_sql()))
+
+    def as_sql(self):
+        return self.QUERY_SQL.format(self._since_date)

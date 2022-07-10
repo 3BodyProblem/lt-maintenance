@@ -76,6 +76,11 @@ class _QueryPolicyInterface(object):
         return self._policy_name
 
     @abstractmethod
+    def on_prepare(self):
+        """event before execute query policy"""
+        raise NotImplementedError
+
+    @abstractmethod
     def as_sql(self):
         """Return Query Sql
 

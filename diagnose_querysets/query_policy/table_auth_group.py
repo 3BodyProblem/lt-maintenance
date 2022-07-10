@@ -18,5 +18,8 @@ class _AuthGroupQureyPolicy(_QueryPolicyInterface):
             print(exc_msg)
             return exc_msg
 
+    def on_prepare(self):
+        pass
+
     def as_sql(self):
         return self.QUERY_SQL

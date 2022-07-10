@@ -34,6 +34,8 @@
 		- Check Error Logs in Screen ( Some Node may got failure because of Unstable SSL connection )
 		- Check dump file: dump_analytics_last_days/analytics_2021-aa-bb.dump
 
+    !!! Module `diagnose_querysets` is better then this module.
+
 """
 
 # *** We Patched all at the TOP line. ***

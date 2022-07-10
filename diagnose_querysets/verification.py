@@ -16,7 +16,6 @@ from nodes_table import Nodes
 class _MySqlCommander(object):
     """Mysql login & query commander wrapper class."""
     INCREMENT_COUNT = 0
-    SQL_QUERY_REPORTLOG = r'SELECT * FROM triboo_analytics_reportlog WHERE date(created)>="{}";'
 
     def __init__(self, node_name, ssl_session, mysql_connection_settings, login_password, query_sql, mysql_response_validator, dump_file):
         self._echo_content = r'{} {}'.format(node_name, ' >>>>>>>>>>> \r\n')
@@ -29,7 +28,6 @@ class _MySqlCommander(object):
         self._ssl_stderr = None
         self._query_sql = query_sql
         self._mysql_response_validator = mysql_response_validator
-        self._login_flag = False
         self._login(login_password)
 
     def __enter__(self):
@@ -49,8 +47,8 @@ class _MySqlCommander(object):
         self._dump_file.write('=======> [{}] \r\n'.format(_MySqlCommander.INCREMENT_COUNT))
         self._dump_file.write(self._echo_content)
 
-    def _sync_exe_command(self, cmd, raise_exc_flag=False):
-        """Execute & Return response of command
+    def _sync_exe_command(self, cmd, raise_exc_flag=True):
+        """Execute & Return response of command ( including Exception ) or raise Exception.
 
             @param cmd:                 command string for error message
             @type cmd:                  string
@@ -58,18 +56,21 @@ class _MySqlCommander(object):
         try:
             self._shell_session.sendall(cmd + '\n')
 
-            for i in range(1, 60):
-                sleep(3)
+            for i in range(1, 100):
+                sleep(1)        # Timeout = 100 Seconds
 
                 if self._shell_session.recv_ready():
-                    return self._shell_session.recv(1024 * 1024 * 3)
+                    sleep(6)
+                    return self._shell_session.recv(1024 * 1024 * 6)
 
             raise ValueError(r'[Exception : TIMEOUT] : {}'.format(cmd))
 
         except Exception:
-            self._append_echo_content(cmd)
             if raise_exc_flag:
                 raise
+            else:
+                self._append_echo_content(cmd)
+
             return format_exc()
 
     def _login(self, login_password):
@@ -78,33 +79,24 @@ class _MySqlCommander(object):
             @param login_password:      Mysql Login Password
             @type login_password:       string
         """
-        try:
-            resp = self._sync_exe_command(
+        resp = self._sync_exe_command(
+            self._mysql_connection_settings.connection_string.replace(' -p ', ' -p{} '.format(login_password))
+        )
+        if r'mysql>' not in resp and r'MySQL connection id is' not in resp and r'mysql: [Warning]' not in resp:
+            exc_msg = r'[Login Exception] {} : {}'.format(
                 self._mysql_connection_settings.connection_string.replace(' -p ', ' -p{} '.format(login_password)),
-                raise_exc_flag=True
+                resp
             )
-            if r'mysql>' not in resp:
-                exc_msg = r'[Login Exception] {} : {}'.format(
-                    self._mysql_connection_settings.connection_string.replace(' -p ', ' -p{} '.format(login_password)),
-                    resp
-                )
-                self._append_echo_content(exc_msg)
-                raise ValueError(exc_msg)
-
-            self._login_flag = True
-        except Exception:
-            pass
+            raise ValueError(exc_msg)
 
     def _logout(self):
-        """Logout Mysql session"""
+        """Logout Mysql session & Don't throw any exception"""
         try:
             resp = self._sync_exe_command(r'exit;')
             if 'Bye' not in resp:
                 raise ValueError('Failed to logout: {}'.format(resp))
         except Exception:
-            exc_msg = r'[Exception occur while Logout] : {err_msg}'.format(err_msg=format_exc())
-            self._append_echo_content(exc_msg)
-            print(exc_msg)
+            print(r'[Exception occur while Logout] : {err_msg}'.format(err_msg=format_exc()))
 
     def _verify_analytics_by_date(self):
         """Verify analytics compiled correctly in the past days"""
@@ -112,14 +104,11 @@ class _MySqlCommander(object):
 
         err_msg = self._mysql_response_validator(resp)
         if err_msg:
-            self._append_echo_content(err_msg)
-        else:
-            self._append_echo_content(resp)
+            raise ValueError(err_msg)
+
+        self._append_echo_content(resp)
 
     def execute(self):
-        if not self._login_flag:
-            return
-
         self._verify_analytics_by_date()
 
 
@@ -141,6 +130,8 @@ class Verification(object):
         self._fr_mysql_pswd = fr_mysql_pswd
         self._us_mysql_pswd = us_mysql_pswd
         self._policy_obj = policy_obj
+        # Callback of policy
+        self._policy_obj.on_prepare()       # Trigger prepare event
 
     @property
     def dump_file_path(self):
@@ -162,14 +153,34 @@ class Verification(object):
                 if node.type() == Nodes.LINETYPE_AMERICA_NODE and not self._us_mysql_pswd:
                     continue
 
-                with _MySqlCommander(
-                    node.name(), node.ssl_session,
-                    node.mysql_interactive_command,
-                    self._fr_mysql_pswd if node.type() == Nodes.LINETYPE_FRENCH_NODE else self._us_mysql_pswd,# Choose Pswd by node Type
-                    self._policy_obj.as_sql(),
-                    self._policy_obj.mysql_response_validator,
-                    dump_file=dump_file
-                ) as cmd:
-                    cmd.execute()
+                print(node.name())
+                retry_flag = True
 
+                while retry_flag:
+                    try:
+                        with _MySqlCommander(
+                            node.name(), node.ssl_session,
+                            node.mysql_interactive_command,
+                            self._fr_mysql_pswd if node.type() == Nodes.LINETYPE_FRENCH_NODE else self._us_mysql_pswd,# Choose Pswd by node Type
+                            self._policy_obj.as_sql(),
+                            self._policy_obj.mysql_response_validator,
+                            dump_file=dump_file
+                        ) as cmd:
+                            cmd.execute()
+
+                        retry_flag = False
+
+                    except Exception as _e:
+                        user_choice = raw_input(
+                            'Got an exception : {}\n Do you wanna retry ? [Y/n] :'.format(str(_e))
+                        )
+                        user_choice = user_choice.lower()
+
+                        if 'y' == user_choice:
+                            retry_flag = True
+                        else:
+                            retry_flag = False
+                            dump_file.write(str(_e))
+
+                dump_file.flush()
                 node.release()
