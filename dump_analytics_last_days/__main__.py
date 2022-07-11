@@ -1,5 +1,5 @@
 """
-	The Entry of module.
+	The Entry of module. [Deprecated Module]
 
 	A Simple tool of analytics status checking.
 
@@ -34,7 +34,9 @@
 		- Check Error Logs in Screen ( Some Node may got failure because of Unstable SSL connection )
 		- Check dump file: dump_analytics_last_days/analytics_2021-aa-bb.dump
 
-    !!! Module `diagnose_querysets` is better then this module.
+    !!! Module `diagnose_querysets` is better then this module :
+
+    	- Pls, use New Module `https://github.com/3BodyProblem/lt-maintenance/tree/master/diagnose_querysets` for instead.
 
 """
 
