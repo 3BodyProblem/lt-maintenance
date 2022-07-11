@@ -8,7 +8,7 @@
     - `python -m diagnose_querysets --help`
    
  - Run script
-    - `python -m diagnose_querysets --cert_folder=/Users/barrypaneer/.ssh/ --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --policy_name=???????`
+    - `python -m diagnose_querysets --cert_folder=/Users/barrypaneer/.ssh/ --fr_mysql_pswd=[...] --us_mysql_pswd=[...] --policy_name=triboo_analytics_reportlog`
        - `--policy_name` is a mandatory argument. We could get valid policy list by argument `--help` .
        - `--cert_folder` is the folder of ssl cert pem files.
        - At least one of pswd should be specified.
