@@ -34,18 +34,19 @@
        
        - `auth_group`
          ```
-            # US > Griky - Astrazeneca  >>>>>>>>>>> 
-            SELECT `name` FROM auth_group;
-            +-----------------------------------+
-            | name                              |
-            +-----------------------------------+
-            | Anderspink Denied Users           |
-            | API Access Request Approvers      |
-            | Catalog Denied Users              |
-            | Crehana Denied Users              |
-            ...
-            ...
-            ...
+            Sample of dump file as follow:
+               # US > Griky - Astrazeneca  >>>>>>>>>>> 
+               SELECT `name` FROM auth_group;
+               +-----------------------------------+
+               | name                              |
+               +-----------------------------------+
+               | Anderspink Denied Users           |
+               | API Access Request Approvers      |
+               | Catalog Denied Users              |
+               | Crehana Denied Users              |
+               ...
+               ...
+               ...
          ```
 
  - *** Accessible Database ***
