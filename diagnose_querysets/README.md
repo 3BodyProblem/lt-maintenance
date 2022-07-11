@@ -49,5 +49,9 @@
                ...
          ```
 
+ - How to support MORE Mysql Tables Queries ?
+   - Add more query policy Class into folder `djagnose_querysets/query_policy/xxx.py`
+   - Add instance of the New Policy Class into array `_supported_policies` in file `query_policy/__init__.py`
+
  - *** Accessible Database ***
    - The default database is specified by connection string of conf/nodes.txt 
