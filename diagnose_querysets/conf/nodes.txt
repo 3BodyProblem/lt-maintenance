@@ -115,7 +115,7 @@ ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.226.236.4
 sudo mysql learning-classrun_edxapp -u learning-classrun_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Corona
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.80.41.27
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.236.97.8
 sudo mysql learning-corona_edxapp -u learning-corona_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Eanx
@@ -178,6 +178,10 @@ sudo mysql learning-jsi_edxapp -u learning-jsi_admin -p -h platform-rds-cluster.
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.226.237.199
 sudo mysql learning-konfio_edxapp -u learning-konfio_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
+US > Griky - Kursotech
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.152.205.165
+sudo mysql learning-kursotech_edxapp -u learning-kursotech_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
 # US > Griky - LAMPRO
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.208.202.184
 sudo mysql learning-lampro_edxapp -u learning-lampro_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
@@ -197,6 +201,10 @@ sudo mysql learning-myacademy_edxapp -u learning-myacademy_admin -p -h platform-
 # US > Sitel - Sitelacademy
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.152.191.233
 sudo mysql learning-sitelacademy_edxapp -u learning-sitelacademy_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+US > Griky - UDES
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.228.74.216
+sudo mysql learning-udes_edxapp -u learning-udes_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - UDV
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.209.50.203
