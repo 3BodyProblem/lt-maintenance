@@ -209,7 +209,7 @@ class Nodes(object):
     LINETYPE_SSH_SETTING = 3        # ssh connection string
     LINETYPE_MYSQL_SETTING = 4      # mysql connection string
 
-    def __init__(self, config_file_path, cert_folder):
+    def __init__(self, config_file_path, cert_folder, specified_nodes):
         """Constructor
 
             @param config_file_path:        nodes settings file path ( conf/nodes.txt )
@@ -217,6 +217,7 @@ class Nodes(object):
             @param cert_folder:             ssl cert pem file folder
             @type cert_folder:              string
         """
+        self._specified_nodes = specified_nodes.split(',') if specified_nodes else None
         self._cert_folder = cert_folder
         self._fr_nodes_count = 0
         self._us_nodes_count = 0
@@ -247,6 +248,16 @@ class Nodes(object):
 
         for ec2node in self._ec2node_table:
             ec2node.release()
+
+    def _is_specified_node(self, es_node_name):
+        if not self._specified_nodes:
+            return True
+
+        for _name in self._specified_nodes:
+            if _name in es_node_name:
+                return True
+
+        return False
 
     def __judge_line_type(self, content):
         """We could know the record content type according to the 'keywords' in string.
@@ -295,7 +306,8 @@ class Nodes(object):
                             cert_folder=self._cert_folder
                         )
                         # ######### Append FR Configuration Node #########
-                        self._ec2node_table.append(current_node)
+                        if self._is_specified_node(current_node.name()):
+                            self._ec2node_table.append(current_node)
 
                     elif current_line_type == Nodes.LINETYPE_AMERICA_NODE:
                         self._us_nodes_count += 1
@@ -305,12 +317,15 @@ class Nodes(object):
                             cert_folder=self._cert_folder
                         )
                         # ######### Append US Configuration Node #########
-                        self._ec2node_table.append(current_node)
+                        if self._is_specified_node(current_node.name()):
+                            self._ec2node_table.append(current_node)
 
                     elif current_line_type == Nodes.LINETYPE_SSH_SETTING:
-                        current_node.parse_ssl_connection(record)
+                        if self._is_specified_node(current_node.name()):
+                            current_node.parse_ssl_connection(record)
 
                     elif current_line_type == Nodes.LINETYPE_MYSQL_SETTING:
-                        current_node.parse_mysql_connection(record)
+                        if self._is_specified_node(current_node.name()):
+                            current_node.parse_mysql_connection(record)
 
                 record = file_obj.readline()

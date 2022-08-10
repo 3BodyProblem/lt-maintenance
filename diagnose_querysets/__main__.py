@@ -71,6 +71,10 @@ if __name__ == "__main__":
 			choices=policy_manager.supported_policies,
 			help='Pls, Specified a policy name'
 		)
+		parser.add_argument(
+			'--specified_nodes', default=None,
+			help='Specify ES Node name for investigating ( Comma separated, "FR > ESF,FR > Garantie Privée / EALIS,..." )'
+		)
 		args = parser.parse_args()
 		if not path_exists(args.cert_folder):
 			raise Exception(
@@ -84,7 +88,7 @@ if __name__ == "__main__":
 			)
 
 		# 3. Execute verification
-		with Nodes(config_file_path, args.cert_folder) as ec2nodes:
+		with Nodes(config_file_path, args.cert_folder, args.specified_nodes) as ec2nodes:
 			Verification(
 				ec2nodes,
 				args.fr_mysql_pswd,
