@@ -12,7 +12,7 @@
        - `--policy_name` is a mandatory argument. We could get valid policy list by argument `--help` .
        - `--cert_folder` is the folder of ssl cert pem files.
        - At least one of pswd should be specified.
-       - `--specified_nodes` specify ES Node name for investigating ( Comma separated, "FR > ESF,FR > Garantie Privée / EALIS,..." )
+       - `--specified_nodes` specify ES Node name for investigating ( Comma separated, "US > JMAP (Jazz),FR > ESF,FR > Garantie Privée / EALIS,..." )
     - Output: 
        - A SSL Shell Echo dump file (Sample: `./analytics_2021-11-22.dump`)
 
