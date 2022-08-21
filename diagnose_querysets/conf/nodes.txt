@@ -34,10 +34,6 @@ sudo mysql learning-form-edit_edxapp -u learning-form-edit_admin -p -h platform-
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.213.224.223
 sudo mysql learning-garantie-privee_edxapp -u learning-garantie-privee_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
-# FR > Interflora
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.249.12.179
-sudo mysql learning-interflora_edxapp -u learning-interflora_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > Joyson
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.244.235.188
 sudo mysql learning-joyson_edxapp -u learning-joyson_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
@@ -105,6 +101,10 @@ sudo mysql learning-cablemas_edxapp -u learning-cablemas_admin -p -h platform-rd
 # US > Griky - CEIPA
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.167.97.246
 sudo mysql learning-ceipa_edxapp -u learning-ceipa_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+# US > Griky - Central Next
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.210.85.39
+sudo mysql learning-central-next_edxapp -u learning-central-next_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Clase
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.91.92.169
@@ -178,7 +178,7 @@ sudo mysql learning-jsi_edxapp -u learning-jsi_admin -p -h platform-rds-cluster.
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.226.237.199
 sudo mysql learning-konfio_edxapp -u learning-konfio_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-US > Griky - Kursotech
+# US > Griky - Kursotech
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.152.205.165
 sudo mysql learning-kursotech_edxapp -u learning-kursotech_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
@@ -202,7 +202,7 @@ sudo mysql learning-myacademy_edxapp -u learning-myacademy_admin -p -h platform-
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.152.191.233
 sudo mysql learning-sitelacademy_edxapp -u learning-sitelacademy_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-US > Griky - UDES
+# US > Griky - UDES
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.228.74.216
 sudo mysql learning-udes_edxapp -u learning-udes_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
@@ -234,6 +234,10 @@ sudo mysql learning-sura_edxapp -u learning-sura_admin -p -h platform-rds-cluste
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@35.175.171.60
 sudo mysql learning-une_edxapp -u learning-une_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
+# US > Griky - UNIBE
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.85.207.197
+sudo mysql learning-unibe_edxapp -u learning-unibe_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
 # US > Griky - Unid
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@174.129.44.242
 sudo mysql learning-unid_edxapp -u learning-unid_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
@@ -241,10 +245,6 @@ sudo mysql learning-unid_edxapp -u learning-unid_admin -p -h platform-rds-cluste
 # US > Griky - Tecmed
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@204.236.194.232
 sudo mysql learning-uniminuto_edxapp -u learning-uniminuto_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
-# US > USAA
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.90.174.160
-sudo mysql learning-usaa_edxapp -u learning-usaa_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - USAP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.160.181.35
