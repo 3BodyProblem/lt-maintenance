@@ -34,6 +34,10 @@ sudo mysql learning-form-edit_edxapp -u learning-form-edit_admin -p -h platform-
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.213.224.223
 sudo mysql learning-garantie-privee_edxapp -u learning-garantie-privee_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
+# FR > Interflora
+ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.202.231.151
+sudo mysql learning-interflora_edxapp -u learning-interflora_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
+
 # FR > Joyson
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.244.235.188
 sudo mysql learning-joyson_edxapp -u learning-joyson_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
@@ -257,3 +261,7 @@ sudo mysql learning-uniminuto_edxapp -u learning-uniminuto_admin -p -h platform-
 # US > Griky - USAP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.160.181.35
 sudo mysql learning-usap_edxapp -u learning-usap_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+# US > Griky - UTESA
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.207.220.51
+sudo mysql learning-utesa-plus_edxapp -u learning-utesa-plus_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
