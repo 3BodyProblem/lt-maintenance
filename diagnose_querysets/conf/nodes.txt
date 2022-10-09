@@ -74,10 +74,6 @@ sudo mysql learning-azuresephoraprod_edxapp -u learning-azuresephoraprod_admin@s
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.73.54.204
 sudo mysql learning-squaretrade1_edxapp -u learning-squaretrade1_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
-# FR > Verisure
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.17.35.10
-sudo mysql learning-verisure_edxapp -u learning-verisure_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > Demo
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.245.186.43
 sudo mysql learning-demo_edxapp -u learning-demo_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
