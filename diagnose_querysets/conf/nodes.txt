@@ -106,7 +106,7 @@ sudo mysql learning-cablemas_edxapp -u learning-cablemas_admin -p -h platform-rd
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.167.97.246
 sudo mysql learning-ceipa_edxapp -u learning-ceipa_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US - Griky - Central Next
+# US > Griky - Central Next
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.210.85.39
 sudo mysql learning-central-next_edxapp -u learning-central-next_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
