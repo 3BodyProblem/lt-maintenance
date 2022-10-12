@@ -74,7 +74,7 @@ def remove_invalid_lp_courses(program_dict):
 
         return c_exist
 
-    program_dict['courses'] = [course for course in program_dict['courses'] for run in course['course_runs'] if _course_exists(run['key'], program_dict['title'], course['title'])]
+    program_dict['courses'] = [course for course in program_dict['courses'] for run in course['course_runs'] if _course_exists(run['key'], program_dict['title'].encode('utf-8'), course['title'].encode('utf-8'))]
 
 
 ps  = [p for p in programs.find({'partner': {'$nin': [u'never_exis_abc']}, 'visibility': {'$exists': False} })]
