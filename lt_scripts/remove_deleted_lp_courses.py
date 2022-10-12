@@ -7,7 +7,7 @@
     - Usage : `python manage.py lms shell --settings=aws < remove_deleted_lp_courses.py`
         Sample ===> :
         ```
-        edxapp@learning-tribes:~/edx-platform$ python manage.py lms shell --settings=aws < add_field_visibility.py
+        edxapp@learning-tribes:~/edx-platform$ python manage.py lms shell --settings=aws < remove_deleted_lp_courses.py
         ### [1] Querying field visibility missed records............
         ****** [1.1] Count of LPs : 5
         ****** LP : Test Non Started Path saved
@@ -28,13 +28,13 @@
 """
 from django.core.exceptions import ValidationError
 from lms.djangoapps.program_enrollments.persistance.connection import MongoDbConnectionsManager
+from openedx.core.djangoapps.content.course_overviews.models import CourseOverview
+from opaque_keys.edx.keys import CourseKey
 
 
 mongo_db = MongoDbConnectionsManager.get_manager().get_connection_by_dbname('programs')
 programs = mongo_db['program_set']
 draft_programs = mongo_db['draft_program_set'] 
-
-ps  = [p for p in programs.find({'partner': {'$nin': [u'never_exis_abc']}, 'visibility': {'$exists': False} })]  
 
 
 def save(collection, p_object_data, ignored_fields=None):
@@ -65,3 +65,38 @@ def save(collection, p_object_data, ignored_fields=None):
         },
         upsert=True
     )
+
+
+def course_exists(course_id, p_title, c_title):
+    c_exist = CourseOverview.objects.filter(
+        pk=CourseKey.from_string(course_id)
+    ).exists()
+
+    if not c_exist:
+        print('****** Course [{}] / [{}] would be removed from LP [{}]'.format(c_title, course_id, p_title))
+
+    return c_exist
+
+
+def filter_valid_lp_courses(program_dict):
+    return [course for course in program_dict['courses'] for run in course['course_runs'] if course_exists(run['key'], program_dict['title'], course['title'])]
+
+
+ps  = [p for p in programs.find({'partner': {'$nin': [u'never_exis_abc']}, 'visibility': {'$exists': False} })]
+dps  = [p for p in draft_programs.find({'partner': {'$nin': [u'never_exis_abc']}, 'visibility': {'$exists': False} })]
+
+print('### [1] Querying field visibility missed records of Programs............')
+print('****** [1.1] Count of LPs : {}'.format(len(ps)))
+for p in ps:
+    p = filter_valid_lp_courses(p)
+    save(programs, p)
+    print('****** LP : {} saved'.format(p['title']))
+
+print('### [2] Querying field visibility missed records of Draft Programs............')
+print('****** [2.1] Count of Draft LPs : {}'.format(len(dps)))
+for p in dps:
+    p = filter_valid_lp_courses(p)
+    save(draft_programs, p)
+    print('****** Draft LP : {} saved'.format(p['title']))
+
+print('### [3] Done.')
