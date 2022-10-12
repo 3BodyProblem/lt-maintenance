@@ -28,6 +28,7 @@
 """
 from lms.djangoapps.program_enrollments.persistance.programs import PartialProgram, DraftPartialProgram
 
+
 print('### [1] Querying field visibility missed records............')
 ps = [p for p in PartialProgram.query({'partner': {'$nin': [u'never_exis_abc']}, 'visibility': {'$exists': False} })]
 
