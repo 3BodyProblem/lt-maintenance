@@ -8,21 +8,17 @@
         Sample ===> :
         ```
         edxapp@learning-tribes:~/edx-platform$ python manage.py lms shell --settings=aws < remove_deleted_lp_courses.py
-        ### [1] Querying field visibility missed records............
-        ****** [1.1] Count of LPs : 5
-        ****** LP : Test Non Started Path saved
-        ****** LP : Aaron Test Learning Path saved
-        ****** LP : barry_test_1024_abc saved
-        ****** LP : test_barry_program_1024 saved
-        ****** LP : NEW LP - Change Course After LP Published saved
-        ****** [1.2] Count of Draft LPs : 5
-        ****** Draft LP : Test Non Started Path saved
-        ****** Draft LP : Aaron Test Learning Path saved
-        ****** Draft LP : barry_test_1024_abc saved
-        ****** Draft LP : test_barry_program_1024 saved
-        ****** Draft LP : NEW LP - Change Course After LP Published saved
-        ****** Draft LP : BARRY___UMA_Pro_Ambienteculturalypoliticoennegociosinternacionales_barry saved
-        ### [2] Done.
+        ### [1] Querying field visibility missed records of Programs............
+        ****** [1.1] Count of LPs : 1
+        ****** Course [Teste Scorm] / [course-v1:marelli+1000+20211119] would be removed from LP [Minha Primeira Trilha]
+        ****** Course [Teste Scorm 2] / [course-v1:marelli+1000+20220111] would be removed from LP [Minha Primeira Trilha]
+        ****** LP : Minha Primeira Trilha saved
+        ### [2] Querying field visibility missed records of Draft Programs............
+        ****** [2.1] Count of Draft LPs : 1
+        ****** Course [Teste Scorm] / [course-v1:marelli+1000+20211119] would be removed from LP [Minha Primeira Trilha]
+        ****** Course [Teste Scorm 2] / [course-v1:marelli+1000+20220111] would be removed from LP [Minha Primeira Trilha]
+        ****** Draft LP : Minha Primeira Trilha saved
+        ### [3] Done.
         ```
 
 """
@@ -67,19 +63,18 @@ def save(collection, p_object_data, ignored_fields=None):
     )
 
 
-def course_exists(course_id, p_title, c_title):
-    c_exist = CourseOverview.objects.filter(
-        pk=CourseKey.from_string(course_id)
-    ).exists()
+def remove_invalid_lp_courses(program_dict):
+    def _course_exists(course_id, p_title, c_title):
+        c_exist = CourseOverview.objects.filter(
+            pk=CourseKey.from_string(course_id)
+        ).exists()
 
-    if not c_exist:
-        print('****** Course [{}] / [{}] would be removed from LP [{}]'.format(c_title, course_id, p_title))
+        if not c_exist:
+            print('****** Course [{}] / [{}] would be removed from LP [{}]'.format(c_title, course_id, p_title))
 
-    return c_exist
+        return c_exist
 
-
-def filter_valid_lp_courses(program_dict):
-    return [course for course in program_dict['courses'] for run in course['course_runs'] if course_exists(run['key'], program_dict['title'], course['title'])]
+    program_dict['courses'] = [course for course in program_dict['courses'] for run in course['course_runs'] if _course_exists(run['key'], program_dict['title'], course['title'])]
 
 
 ps  = [p for p in programs.find({'partner': {'$nin': [u'never_exis_abc']}, 'visibility': {'$exists': False} })]
@@ -88,14 +83,14 @@ dps  = [p for p in draft_programs.find({'partner': {'$nin': [u'never_exis_abc']}
 print('### [1] Querying field visibility missed records of Programs............')
 print('****** [1.1] Count of LPs : {}'.format(len(ps)))
 for p in ps:
-    p = filter_valid_lp_courses(p)
+    remove_invalid_lp_courses(p)
     save(programs, p)
     print('****** LP : {} saved'.format(p['title']))
 
 print('### [2] Querying field visibility missed records of Draft Programs............')
 print('****** [2.1] Count of Draft LPs : {}'.format(len(dps)))
 for p in dps:
-    p = filter_valid_lp_courses(p)
+    remove_invalid_lp_courses(p)
     save(draft_programs, p)
     print('****** Draft LP : {} saved'.format(p['title']))
 
