@@ -85,13 +85,13 @@ print('****** [1.1] Count of LPs : {}'.format(len(ps)))
 for p in ps:
     remove_invalid_lp_courses(p)
     save(programs, p)
-    print('****** LP : {} saved'.format(p['title']))
+    print('****** LP : {} saved'.format(p['title'].encode('utf-8')))
 
 print('### [2] Querying field visibility missed records of Draft Programs............')
 print('****** [2.1] Count of Draft LPs : {}'.format(len(dps)))
 for p in dps:
     remove_invalid_lp_courses(p)
     save(draft_programs, p)
-    print('****** Draft LP : {} saved'.format(p['title']))
+    print('****** Draft LP : {} saved'.format(p['title'].encode('utf-8')))
 
 print('### [3] Done.')
