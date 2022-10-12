@@ -1,4 +1,31 @@
+"""
+    - Steps:
+     1. Get all LP records missing new field `course_metadata_program.visibility`
+     2. Add field `visibility` and assign with value `0`(Public LP)
+     3. Save all LPs.
 
+    - Usage : `python manage.py lms shell --settings=aws < remove_deleted_lp_courses.py`
+        Sample ===> :
+        ```
+        edxapp@learning-tribes:~/edx-platform$ python manage.py lms shell --settings=aws < add_field_visibility.py
+        ### [1] Querying field visibility missed records............
+        ****** [1.1] Count of LPs : 5
+        ****** LP : Test Non Started Path saved
+        ****** LP : Aaron Test Learning Path saved
+        ****** LP : barry_test_1024_abc saved
+        ****** LP : test_barry_program_1024 saved
+        ****** LP : NEW LP - Change Course After LP Published saved
+        ****** [1.2] Count of Draft LPs : 5
+        ****** Draft LP : Test Non Started Path saved
+        ****** Draft LP : Aaron Test Learning Path saved
+        ****** Draft LP : barry_test_1024_abc saved
+        ****** Draft LP : test_barry_program_1024 saved
+        ****** Draft LP : NEW LP - Change Course After LP Published saved
+        ****** Draft LP : BARRY___UMA_Pro_Ambienteculturalypoliticoennegociosinternacionales_barry saved
+        ### [2] Done.
+        ```
+
+"""
 from django.core.exceptions import ValidationError
 from lms.djangoapps.program_enrollments.persistance.connection import MongoDbConnectionsManager
 
