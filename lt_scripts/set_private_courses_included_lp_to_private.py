@@ -28,7 +28,7 @@ def is_private_course_in_LP(program):
                 private_course_ids.append(run['key'])
 
     for i in private_course_ids:
-        print('****** Private Course ===> {} is used by LP'.format(i))
+        print('******   =========>>>  Private Course {} is used by LP'.format(i))
 
     return True if private_course_ids else False
 
@@ -39,6 +39,8 @@ print('****** [1.1] Count of LPs : {}'.format(len(ps)))
 for p in ps:
     if is_private_course_in_LP(p):
         print('****** Private Course included in Program {} : {}'.format(p['title'], p['uuid']))
+        p['visibility'] = DEF_VISIBILITY_PRIVATE
+        p.save()
 
 print('### [2] Querying non-private Draft LPs............')
 dps = [p for p in DraftPartialProgram.query({'partner': {'$nin': [u'never_exis_abc']}, 'visibility': {'$nin': [DEF_VISIBILITY_PRIVATE]} })]
@@ -46,5 +48,7 @@ print('****** [1.2] Count of Draft LPs : {}'.format(len(ps)))
 for p in dps:
     if is_private_course_in_LP(p):
         print('****** Private Course included in Draft Program {} : {}'.format(p['title'], p['uuid']))
+        p['visibility'] = DEF_VISIBILITY_PRIVATE
+        p.save()
 
 print('### [3] Done.')
