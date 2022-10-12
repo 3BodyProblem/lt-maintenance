@@ -1,7 +1,7 @@
 """
     - Steps:
      1. Get all LP records missing new field `course_metadata_program.visibility`
-     2. Add field `visibility` and assign with value `0`(Public LP)
+     2. Get all deleted(invalid) courses from LPs and remove them from LPs
      3. Save all LPs.
 
     - Usage : `python manage.py lms shell --settings=aws < remove_deleted_lp_courses.py`
