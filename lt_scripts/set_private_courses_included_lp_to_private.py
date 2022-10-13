@@ -22,6 +22,9 @@
         ****** [Done] Program (1ebf036b-1789-4ae5-a558-2009e04df238) in Mysql.
         ****** [Done] Program (45a1d853-947c-4566-bf1a-ae6560cbc579) in Mysql.
         ### [4] Done.
+
+        Then we saw that
+            the LP( https://studio-demo.triboolearning.com/program_detail/?program_uuid=1ebf036b-1789-4ae5-a558-2009e04df238 ) has been set as "Private" from "Public".
     ```
 
 """
