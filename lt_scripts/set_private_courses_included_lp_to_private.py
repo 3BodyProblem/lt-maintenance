@@ -77,7 +77,7 @@ ps = [p for p in PartialProgram.query({'partner': {'$nin': [u'never_exis_abc']},
 print('****** [1.1] Count of LPs : {}'.format(len(ps)))
 for p in ps:
     if is_private_course_in_LP(p):
-        print('****** Private Course included in Program {} : {}'.format(p['title'], p['uuid']))
+        print('****** Private Course included in Program {} : {}'.format(p['title'].encode('utf-8'), p['uuid']))
         program_uuids.add(p['uuid'])
         p['visibility'] = DEF_VISIBILITY_PRIVATE
         p.save()
@@ -87,7 +87,7 @@ dps = [p for p in DraftPartialProgram.query({'partner': {'$nin': [u'never_exis_a
 print('****** [1.2] Count of Draft LPs : {}'.format(len(ps)))
 for p in dps:
     if is_private_course_in_LP(p):
-        print('****** Private Course included in Draft Program {} : {}'.format(p['title'], p['uuid']))
+        print('****** Private Course included in Draft Program {} : {}'.format(p['title'].encode('utf-8'), p['uuid']))
         program_uuids.add(p['uuid'])
         p['visibility'] = DEF_VISIBILITY_PRIVATE
         p.save()
