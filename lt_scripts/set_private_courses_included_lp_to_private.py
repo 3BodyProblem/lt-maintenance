@@ -1,5 +1,5 @@
 """
-    A script to check full public LPs using private courses, then set these LPs as private
+    A script to check ( "Public" + "Accessible by URL" ) LPs using private courses, then set these LPs as private
 
     Usage: `python manage.py lms shell --settings=aws < set_private_courses_included_lp_to_private.py`
     Sample ===> : ```
