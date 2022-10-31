@@ -82,6 +82,10 @@ sudo mysql learning-demo_edxapp -u learning-demo_admin -p -h platform-rds-cluste
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.212.106.25
 sudo mysql learning-beta_edxapp -u learning-beta_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
+# US > JSI - AFP
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.159.4.240
+sudo mysql learning-afp_edxapp -u learning-afp_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
 # US > Griky - Astrazeneca
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.227.55.68
 sudo mysql learning-astrazeneca_edxapp -u learning-astrazeneca_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
@@ -167,7 +171,7 @@ ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.204.49.199
 sudo mysql learning-isep_edxapp -u learning-isep_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - ISTTE
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.215.175.102
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.94.158.57
 sudo mysql learning-istte_edxapp -u learning-istte_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > JMAP (Jazz)
@@ -194,9 +198,17 @@ sudo mysql learning-kursotech_edxapp -u learning-kursotech_admin -p -h platform-
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.208.202.184
 sudo mysql learning-lampro_edxapp -u learning-lampro_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
+# US > Griky - Learning Latam
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.207.207.156
+sudo mysql learning-learninglatam_edxapp -u learning-learninglatam_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
 # US > Griky - OCF
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.90.103.85
 sudo mysql learning-ocf_edxapp -u learning-ocf_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+# US > Griky - POLI
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.202.236.215
+sudo mysql learning-poli_edxapp -u learning-poli_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Robinfood
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.90.62.152
