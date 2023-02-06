@@ -22,10 +22,6 @@ sudo mysql learning-cofidisprod_edxapp -u learning-cofidisprod_admin -p -h platf
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.211.41.175
 sudo mysql learning-esf_edxapp -u learning-esf_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
-# FR > Form-Edit
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.243.30.141
-sudo mysql learning-form-edit_edxapp -u learning-form-edit_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > Garantie Privée / EALIS
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.213.224.223
 sudo mysql learning-garantie-privee_edxapp -u learning-garantie-privee_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
@@ -73,6 +69,10 @@ sudo mysql learning-demo_edxapp -u learning-demo_admin -p -h platform-rds-cluste
 # FR > Shared / Beta / App
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.212.106.25
 sudo mysql learning-beta_edxapp -u learning-beta_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
+
+# US > ALATA
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@75.101.222.117
+sudo mysql learning-alata_edxapp -u learning-alata_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > JSI - AFP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.159.4.240
@@ -242,11 +242,11 @@ sudo mysql learning-sitelacademy_edxapp -u learning-sitelacademy_admin -p -h pla
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.229.11.20
 sudo mysql learning-sura_edxapp -u learning-sura_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-US > Griky - U. Insurgentes (https://uinmas.universidadinsurgentes.edu.mx)
+# US > Griky - U. Insurgentes (https://uinmas.universidadinsurgentes.edu.mx)
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.204.225.70
 sudo mysql learning-insurgentes_edxapp -u learning-insurgentes_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-US > Griky - UDES
+# US > Griky - UDES
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.228.74.216
 sudo mysql learning-udes_edxapp -u learning-udes_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
