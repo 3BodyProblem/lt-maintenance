@@ -70,6 +70,10 @@ sudo mysql learning-demo_edxapp -u learning-demo_admin -p -h platform-rds-cluste
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.212.106.25
 sudo mysql learning-beta_edxapp -u learning-beta_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
+# US > AARP
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.83.121.104
+sudo mysql learning-aarp_edxapp -u learning-aarp_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
 # US > ALATA
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@75.101.222.117
 sudo mysql learning-alata_edxapp -u learning-alata_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
@@ -137,6 +141,10 @@ sudo mysql learning-cxlearning_edxapp -u learning-cxlearning_admin -p -h platfor
 # US > Griky - Eanx
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.196.213.249
 sudo mysql learning-eanx_edxapp -u learning-eanx_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+# US > Griky - EdOnline
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.226.215.52
+sudo mysql learning-edonline_edxapp -u learning-edonline_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - EDP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.228.113.91
