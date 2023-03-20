@@ -238,11 +238,11 @@ sudo mysql learning-poli_edxapp -u learning-poli_admin -p -h platform-rds-cluste
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.90.62.152
 sudo mysql learning-grikyfour_edxapp -u learning-grikyfour_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US > Sitel - MyAcademy
+# US > Foundever - My Academy
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.54.2.165
 sudo mysql learning-myacademy_edxapp -u learning-myacademy_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US > Sitel - Sitelacademy
+# US > Foundever - FoundeAver cademy
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.152.191.233
 sudo mysql learning-sitelacademy_edxapp -u learning-sitelacademy_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
@@ -261,6 +261,10 @@ sudo mysql learning-udes_edxapp -u learning-udes_admin -p -h platform-rds-cluste
 # US > Griky - UDV
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.209.50.203
 sudo mysql learning-udv_edxapp -u learning-udv_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+# US > Griky - UEES
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.87.86.199
+sudo mysql learning-uees_edxapp -u learning-uees_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - UGB
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.80.102.1
