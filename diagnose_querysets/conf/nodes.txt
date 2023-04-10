@@ -18,6 +18,10 @@ sudo mysql learning-bpce_edxapp -u learning-bpce_admin -p -h platform-rds-cluste
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@46.137.28.34
 sudo mysql learning-cofidisprod_edxapp -u learning-cofidisprod_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
+# FR > Total - EACOP
+ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.252.70.177
+sudo mysql learning-eacop_edxapp -u learning-eacop_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
+
 # FR > ESF
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.211.41.175
 sudo mysql learning-esf_edxapp -u learning-esf_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
@@ -121,6 +125,10 @@ sudo mysql learning-central-next_edxapp -u learning-central-next_admin -p -h pla
 # US > Griky - CERTIFICATE
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.4.209.51
 sudo mysql learning-certificate_edxapp -u learning-certificate_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+# US > JSI - Circle Group
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.173.87.246
+sudo mysql learning-circlegroup_edxapp -u learning-circlegroup_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Clase
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.91.92.169
@@ -242,7 +250,7 @@ sudo mysql learning-grikyfour_edxapp -u learning-grikyfour_admin -p -h platform-
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.54.2.165
 sudo mysql learning-myacademy_edxapp -u learning-myacademy_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US > Foundever - FoundeAver cademy
+# US > Foundever - Foundever Academy
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.152.191.233
 sudo mysql learning-sitelacademy_edxapp -u learning-sitelacademy_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
@@ -297,6 +305,10 @@ sudo mysql learning-unid_edxapp -u learning-unid_admin -p -h platform-rds-cluste
 # US > Griky - Uniminuto
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@204.236.194.232
 sudo mysql learning-uniminuto_edxapp -u learning-uniminuto_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+# US > Griky - Unisabana
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@75.101.180.248
+sudo mysql learning-unisabana_edxapp -u learning-unisabana_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - USAP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.160.181.35
