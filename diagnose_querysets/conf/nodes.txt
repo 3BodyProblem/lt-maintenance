@@ -19,7 +19,7 @@ ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@46.137.28.34
 sudo mysql learning-cofidisprod_edxapp -u learning-cofidisprod_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # FR > Total - EACOP
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.216.252.202
+ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.202.167.81
 sudo mysql learning-eacop_edxapp -u learning-eacop_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # FR > ESF
