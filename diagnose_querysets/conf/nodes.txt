@@ -78,10 +78,6 @@ sudo mysql learning-beta_edxapp -u learning-beta_admin -p -h platform-rds-cluste
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.83.121.104
 sudo mysql learning-aarp_edxapp -u learning-aarp_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US > ALATA
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@75.101.222.117
-sudo mysql learning-alata_edxapp -u learning-alata_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
 # US > JSI - AFP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.159.4.240
 sudo mysql learning-afp_edxapp -u learning-afp_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
@@ -118,10 +114,6 @@ sudo mysql learning-cablemas_edxapp -u learning-cablemas_admin -p -h platform-rd
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.167.97.246
 sudo mysql learning-ceipa_edxapp -u learning-ceipa_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US > Griky - Central Next
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.210.85.39
-sudo mysql learning-central-next_edxapp -u learning-central-next_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
 # US > Griky - CERTIFICATE
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.4.209.51
 sudo mysql learning-certificate_edxapp -u learning-certificate_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
@@ -145,14 +137,6 @@ sudo mysql learning-corona_edxapp -u learning-corona_admin -p -h platform-rds-cl
 # US > Griky - CX Learning Catalogue
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.88.216.100
 sudo mysql learning-cxlearning_edxapp -u learning-cxlearning_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
-# US > Griky - Eanx
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.196.213.249
-sudo mysql learning-eanx_edxapp -u learning-eanx_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
-# US > Griky - EdOnline
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.226.215.52
-sudo mysql learning-edonline_edxapp -u learning-edonline_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - EDP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.228.113.91
@@ -194,10 +178,6 @@ sudo mysql learning-incap_edxapp -u learning-incap_admin -p -h platform-rds-clus
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.196.229.164
 sudo mysql learning-instituto_edxapp -u learning-instituto_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US > Griky - ISEP
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.204.49.199
-sudo mysql learning-isep_edxapp -u learning-isep_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
 # US > Griky - ISTTE
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.94.158.57
 sudo mysql learning-istte_edxapp -u learning-istte_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
@@ -225,10 +205,6 @@ sudo mysql learning-lampro_edxapp -u learning-lampro_admin -p -h platform-rds-cl
 # US > Griky - Learning Latam
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.207.207.156
 sudo mysql learning-learninglatam_edxapp -u learning-learninglatam_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
-# US > Griky - MiMa
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@174.129.252.192
-sudo mysql learning-mima-education_edxapp -u learning-mima-education_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - OCF
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.90.103.85
