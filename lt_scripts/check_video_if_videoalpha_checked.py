@@ -1,5 +1,5 @@
 """
-    Command : `python manage.py lms shell < check_video_if_videoalpha_checked.py`
+    Command : `python manage.py cms shell < check_video_if_videoalpha_checked.py`
 
 """
 
@@ -18,10 +18,10 @@ except Exception:
 print('... user loaded: {}'.format(_user))
 
 
-# INCORRECT_NAME = 'videoalpha'
-# CORRECT_NAME = 'video'
-INCORRECT_NAME = 'video'
-CORRECT_NAME = 'videoalpha'
+INCORRECT_NAME = 'videoalpha'
+CORRECT_NAME = 'video'
+#INCORRECT_NAME = 'video'
+#CORRECT_NAME = 'videoalpha'
 
 
 print('2) ### Replacing `videoalpha` with `video`...')
