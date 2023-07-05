@@ -33,6 +33,9 @@ for course in CourseOverview.objects.all():
         print("... WARNING: coruse ({}) doesn't exist in MongoDB...".format(course_key))
         continue
 
+    if not course_description.advanced_modules:
+        continue
+
     for index, module in enumerate(course_description.advanced_modules):
         if module == INCORRECT_NAME:
             course_description.advanced_modules[index] = CORRECT_NAME
@@ -40,6 +43,8 @@ for course in CourseOverview.objects.all():
             print('... Replaced Course ({})`videoalpha` with `video` ==> {}'.format(
                 course_key, ','.join(course_description.advanced_modules))
             )
+
+    #course_description._dirty_fields
 
 
 print('3) ### Checking `videoalpha` related courses, again...')
@@ -49,6 +54,9 @@ for course in CourseOverview.objects.all():
         course_description = modulestore().get_course(course_key)
     except Exception:
         print("... WARNING: coruse ({}) doesn't exist in MongoDB...".format(course_key))
+        continue
+
+    if not course_description.advanced_modules:
         continue
 
     for module in course_description.advanced_modules:
