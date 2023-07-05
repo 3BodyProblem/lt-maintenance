@@ -39,7 +39,10 @@ for course in CourseOverview.objects.all():
     for index, module in enumerate(course_description.advanced_modules):
         if module == INCORRECT_NAME:
             course_description.advanced_modules[index] = CORRECT_NAME
-            modulestore().update_item(course_description, _user.id)
+            try:
+                modulestore().update_item(course_description, _user.id)
+            except Exception as e:
+                print(e)
             print('... Replaced Course ({})`videoalpha` with `video` ==> {}'.format(
                 course_key, ','.join(course_description.advanced_modules))
             )
