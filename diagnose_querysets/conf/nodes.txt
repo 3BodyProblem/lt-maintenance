@@ -10,10 +10,6 @@ sudo mysql learning-accor_edxapp -u learning-accor_admin -p -h platform-rds-clus
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.154.26.131
 sudo mysql learning-truebesson_edxapp -u learning-truebesson_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
-# FR > BPCE
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.245.166.210
-sudo mysql learning-bpce_edxapp -u learning-bpce_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > Cofidis
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@46.137.28.34
 sudo mysql learning-cofidisprod_edxapp -u learning-cofidisprod_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
@@ -63,7 +59,7 @@ ssh -i azure.pem -o ServerAliveInterval=45 ubuntu@20.56.114.19
 sudo mysql learning-azuresephoraprod_edxapp -u learning-azuresephoraprod_admin@sephora-mysql-prod -p -h sephora-mysql-prod.mysql.database.azure.com
 
 # FR > SquareTrade
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.73.54.204
+ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.249.12.121
 sudo mysql learning-squaretrade1_edxapp -u learning-squaretrade1_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # FR > Demo
@@ -77,10 +73,6 @@ sudo mysql learning-beta_edxapp -u learning-beta_admin -p -h platform-rds-cluste
 # US > AARP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.83.121.104
 sudo mysql learning-aarp_edxapp -u learning-aarp_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
-# US > JSI - AFP
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.159.4.240
-sudo mysql learning-afp_edxapp -u learning-afp_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - ANAHUAC
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.196.177.66
@@ -117,10 +109,6 @@ sudo mysql learning-ceipa_edxapp -u learning-ceipa_admin -p -h platform-rds-clus
 # US > Griky - CERTIFICATE
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.4.209.51
 sudo mysql learning-certificate_edxapp -u learning-certificate_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
-# US > JSI - Circle Group
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.173.87.246
-sudo mysql learning-circlegroup_edxapp -u learning-circlegroup_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Clase
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.91.92.169
@@ -185,10 +173,6 @@ sudo mysql learning-istte_edxapp -u learning-istte_admin -p -h platform-rds-clus
 # US > Jazz
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.91.58.11
 sudo mysql learning-jmap_edxapp -u learning-jmap_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
-# US > JSI
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.235.138.216
-sudo mysql learning-jsi_edxapp -u learning-jsi_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Konfio
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.226.237.199
