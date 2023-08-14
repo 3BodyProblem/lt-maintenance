@@ -42,10 +42,6 @@ sudo mysql learning-lifescan_edxapp -u learning-lifescan_admin -p -h platform-rd
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.215.61.82
 sudo mysql learning-marelli_edxapp -u learning-marelli_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
-# FR > Marih
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.209.69.227
-sudo mysql learning-marih_edxapp -u learning-marih_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > PMSM
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.254.199.42
 sudo mysql learning-pmsm_edxapp -u learning-pmsm_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
