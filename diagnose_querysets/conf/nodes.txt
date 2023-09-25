@@ -230,10 +230,6 @@ sudo mysql learning-udes_edxapp -u learning-udes_admin -p -h platform-rds-cluste
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.209.50.203
 sudo mysql learning-udv_edxapp -u learning-udv_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US > Griky - UEES
-# ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.87.86.199
-# sudo mysql learning-uees_edxapp -u learning-uees_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
 # US > Griky - UGB
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.80.102.1
 sudo mysql learning-ugb_edxapp -u learning-ugb_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
