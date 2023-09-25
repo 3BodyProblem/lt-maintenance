@@ -46,10 +46,6 @@ sudo mysql learning-marelli_edxapp -u learning-marelli_admin -p -h platform-rds-
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.254.199.42
 sudo mysql learning-pmsm_edxapp -u learning-pmsm_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
-# FR > Récréalire
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.249.84.162
-sudo mysql learning-recrealire_edxapp -u learning-recrealire_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > Sephora
 ssh -i azure.pem -o ServerAliveInterval=45 ubuntu@20.56.114.19
 sudo mysql learning-azuresephoraprod_edxapp -u learning-azuresephoraprod_admin@sephora-mysql-prod -p -h sephora-mysql-prod.mysql.database.azure.com
@@ -233,6 +229,10 @@ sudo mysql learning-udes_edxapp -u learning-udes_admin -p -h platform-rds-cluste
 # US > Griky - UDV
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@18.209.50.203
 sudo mysql learning-udv_edxapp -u learning-udv_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
+
+# US > Griky - UEES
+# ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.87.86.199
+# sudo mysql learning-uees_edxapp -u learning-uees_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - UGB
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.80.102.1
