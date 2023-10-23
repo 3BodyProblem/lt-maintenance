@@ -18,18 +18,6 @@ sudo mysql learning-cofidisprod_edxapp -u learning-cofidisprod_admin -p -h platf
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.244.43.5
 sudo mysql learning-eacop_edxapp -u learning-eacop_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
-# FR > ESF
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.211.41.175
-sudo mysql learning-esf_edxapp -u learning-esf_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
-# FR > Garantie Privée / EALIS
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.213.224.223
-sudo mysql learning-garantie-privee_edxapp -u learning-garantie-privee_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
-# FR > Joyson
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.244.235.188
-sudo mysql learning-joyson_edxapp -u learning-joyson_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
 # FR > Lifescan UK
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@52.213.173.115
 sudo mysql learning-lifescanbeta_edxapp -u learning-lifescanbeta_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
@@ -161,10 +149,6 @@ sudo mysql learning-instituto_edxapp -u learning-instituto_admin -p -h platform-
 # US > Griky - ISTTE
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.94.158.57
 sudo mysql learning-istte_edxapp -u learning-istte_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
-# US > Jazz
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.91.58.11
-sudo mysql learning-jmap_edxapp -u learning-jmap_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Griky - Konfio
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.226.237.199
