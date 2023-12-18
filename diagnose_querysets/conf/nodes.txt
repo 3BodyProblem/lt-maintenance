@@ -98,10 +98,6 @@ sudo mysql learning-classrun_edxapp -u learning-classrun_admin -p -h platform-rd
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.87.28.248
 sudo mysql learning-corona_edxapp -u learning-corona_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
-# US > Griky - CX Learning Catalogue
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.88.216.100
-sudo mysql learning-cxlearning_edxapp -u learning-cxlearning_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
 # US > Griky - EDP
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.228.113.91
 sudo mysql learning-edp_edxapp -u learning-edp_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
