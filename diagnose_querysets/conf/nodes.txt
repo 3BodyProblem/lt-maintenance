@@ -1,4 +1,4 @@
-# FR > Abbott
+y# FR > Abbott
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.249.4.219
 sudo mysql learning-abbott_edxapp -u learning-abbott_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
