@@ -1,4 +1,4 @@
-y# FR > Abbott
+# FR > Abbott
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.249.4.219
 sudo mysql learning-abbott_edxapp -u learning-abbott_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
@@ -17,10 +17,6 @@ sudo mysql learning-lifescanbeta_edxapp -u learning-lifescanbeta_admin -p -h pla
 # FR > Lifescan US
 ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.243.59.145
 sudo mysql learning-lifescan_edxapp -u learning-lifescan_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
-
-# FR > PMSM
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.254.199.42
-sudo mysql learning-pmsm_edxapp -u learning-pmsm_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # FR > Sephora
 ssh -i azure.pem -o ServerAliveInterval=45 ubuntu@20.56.114.19
@@ -45,10 +41,6 @@ sudo mysql learning-aarp_edxapp -u learning-aarp_admin -p -h platform-rds-cluste
 # US > Bath & Body Works
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=4 ubuntu@107.21.86.66
 sudo mysql learning-bbw_edxapp -u learning-bbw_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
-
-# US > Griky - Corona
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.87.28.248
-sudo mysql learning-corona_edxapp -u learning-corona_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Foundever - Foundever Academy
 ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.152.191.233
