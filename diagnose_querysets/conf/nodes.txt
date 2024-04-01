@@ -3,7 +3,7 @@ ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.249.4.219
 sudo mysql learning-abbott_edxapp -u learning-abbott_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # FR > Accor
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.194.112.169
+ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.244.209.130
 sudo mysql learning-accor_edxapp -u learning-accor_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # FR > Cofidis
@@ -31,7 +31,7 @@ ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.245.186.43
 sudo mysql learning-demo_edxapp -u learning-demo_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # FR > Shared / Beta / App
-ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@3.249.136.171
+ssh -i eu-west-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@34.241.94.13
 sudo mysql learning-beta_edxapp -u learning-beta_admin -p -h platform-rds-cluster.cluster-cx8daydrjvlq.eu-west-1.rds.amazonaws.com
 
 # US > AARP
@@ -39,7 +39,7 @@ ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=45 ubuntu@54.83.121.104
 sudo mysql learning-aarp_edxapp -u learning-aarp_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Bath & Body Works
-ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=4 ubuntu@107.21.86.66
+ssh -i us-east-1_platform_key.pem -o ServerAliveInterval=4 ubuntu@34.201.102.89
 sudo mysql learning-bbw_edxapp -u learning-bbw_admin -p -h platform-rds-cluster.cluster-c2gmtlfkimc4.us-east-1.rds.amazonaws.com
 
 # US > Foundever - Foundever Academy
