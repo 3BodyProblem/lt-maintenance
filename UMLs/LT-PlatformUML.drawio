@@ -1,0 +1,648 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17" pages="2">
+  <diagram id="C5RBs43oDa-KdzZeNtuy" name="Course System">
+    <mxGraphModel dx="2183" dy="1304" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="WIyWlLk6GJQsqaUBKTNV-1" parent="WIyWlLk6GJQsqaUBKTNV-0" />
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#3333FF;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-3" target="XPpvTZwdT9hd0jFBfwsr-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;/p&gt;&lt;span style=&quot;font-family: Verdana; font-size: 14px; text-align: center; caret-color: rgb(0, 0, 0); background-color: rgb(228, 228, 228);&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;&lt;font color=&quot;#2b24f0&quot;&gt;Collection Name:&amp;nbsp; modulestore.active_versions&lt;/font&gt;&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(0, 0, 0); font-family: Verdana; font-size: 14px; text-align: center; caret-color: rgb(0, 0, 0); background-color: rgb(228, 228, 228);&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;_id = ObjectId(&#39;......uuid.....&#39;)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// [ Primary Key ]&lt;br&gt;search_targets = {&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // predefined search condition&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &#39;filter_key_A&#39; : &#39;search string&#39;,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&#39;filter_key_B&#39; : &#39;search string&#39;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;}&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;versions = {&amp;nbsp;&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &#39;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;draft-branch&lt;/font&gt;&lt;/b&gt;&#39;: ObjectId(&#39;.....uuid.....&#39;),&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// &lt;font color=&quot;#3333ff&quot;&gt;PK of &#39;modulestore.structures&#39;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &#39;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;published-branch&lt;/font&gt;&lt;/b&gt;&#39;: ObjectId(&#39;....uuid....&#39;)&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;// &lt;font color=&quot;#3333ff&quot;&gt;PK of &#39;modulestore.structures&#39;&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;}&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;schema_version = 1&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Data version&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;last_update = ISODate(...)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;edited_on = ISODate(...)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;edited_by = ISODate(...)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;font color=&quot;#3333ff&quot;&gt;&lt;b&gt;run&lt;/b&gt;&lt;/font&gt; = string(......)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Course Run String&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;course&lt;/font&gt;&lt;/b&gt; = &quot;course number &quot;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Course Number String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;org&lt;/font&gt;&lt;/b&gt; = &quot;organization&quot;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // Course Organization String&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;" tooltip="URL: https://docs.openedx.org/projects/edx-platform/en/latest/references/docs/xmodule/modulestore/docs/split-mongo.html#course-structures" id="XPpvTZwdT9hd0jFBfwsr-3">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=3;strokeColor=#3333FF;rounded=0;shadow=0;glass=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="40" y="216" width="500" height="278" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#0050ef;strokeColor=#001DBC;strokeWidth=3;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-4" target="XPpvTZwdT9hd0jFBfwsr-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-4" value="&lt;h2 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;MongoDB :&amp;nbsp; &amp;nbsp;Course Index Collection&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;def get_course_index(self, key, ...):&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;&quot;&quot;&quot;Return Course Structure Collection primary key by argument &#39;key&#39; containing &#39;org + course + run&#39;&quot;&quot;&quot;&lt;/span&gt;&lt;/h2&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="40" y="17" width="500" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=3;strokeColor=#3333FF;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-6" target="XPpvTZwdT9hd0jFBfwsr-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;/p&gt;&lt;div&gt;&lt;span style=&quot;text-align: center; background-color: rgb(228, 228, 228);&quot;&gt;&lt;font face=&quot;Verdana&quot; color=&quot;#2b24f0&quot;&gt;&lt;span style=&quot;font-size: 14px; caret-color: rgb(0, 0, 0);&quot;&gt;&lt;b&gt;&lt;i&gt;Collection Name:&amp;nbsp; modulestore.structures&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;/span&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;_id&lt;/font&gt;&lt;/b&gt; = ObjectId(&#39;......uuid.....&#39;)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// &lt;font color=&quot;#3333ff&quot;&gt;&lt;b&gt;[ Primary Key ]&lt;/b&gt;&amp;nbsp;&lt;/font&gt; &amp;lt; ----- Pointed from modulestore.active_versions::version&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;edited_on = ISODate(...)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;edited_by = user_id&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;previous_version = ObjectId(&#39;...uuid...&#39;)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Pk of Collection &#39;modulestore.strucutres&#39; pointing to previous version of this Course&lt;br&gt;original_version = ObjectId(&#39;...uuid...&#39;)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;// Pk of Collection &#39;modulestore.strucutres&#39; pointing to original version of this Course&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;schema_version = 1&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // Data version&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;blocks&lt;/font&gt;&lt;/b&gt; = [&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; {&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;definition&lt;/font&gt;&lt;/b&gt; : ObjectId(&#39;...uuid...&#39;),&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // Pk of &#39;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;modulestore.definitions&#39;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;block_type: &#39;XBlock/XModule type&#39;,&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // Example: &#39;about&#39; / &#39;pdf&#39; / &#39;html&#39; / &#39;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;scormxblock&#39; / ......&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; block_id: &#39;Unique string in a course&#39;,&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;defaults : { },&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;fields&lt;/font&gt;&lt;/b&gt;: { ...&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;},&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // fields(key/value pairs) set depending on different XBlock/XModule type&amp;nbsp;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; edit_info&quot; : {&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; edited_by : user_id,&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; edited_on&quot; : ISODate(...),&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; previous_version : null or ObjectId(&#39;...uuid&#39;...),&amp;nbsp; &amp;nbsp; &amp;nbsp;//&amp;nbsp;the guid for the structure which previously changed this xblock&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; original_usage_version&quot; : null or ObjectId(&#39;...uuid...&#39;),&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; original_usage&quot; : null or ObjectId(&#39;...uuid...&#39;),&amp;nbsp; &amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; source_version&quot; : null or&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ObjectId(&#39;...uuid...&#39;)&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;,&amp;nbsp; &amp;nbsp; &amp;nbsp; //&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;the guid for the structure was copied/published into this block&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; update_version&quot; : ObjectId(&#39;...uuid...&#39;)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; //&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;PK of &#39;modulestore.structures&#39;&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;where this xblock got its current field values&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; },&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; asides = { ... }&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; },&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&amp;nbsp; &amp;nbsp; ......&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;]&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;" tooltip="URL: https://docs.openedx.org/projects/edx-platform/en/latest/references/docs/xmodule/modulestore/docs/split-mongo.html#course-structures" id="XPpvTZwdT9hd0jFBfwsr-6">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=3;strokeColor=#3333FF;rounded=0;shadow=0;glass=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="600" y="145" width="740" height="421" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#0050ef;strokeColor=#001DBC;strokeWidth=3;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-8" target="XPpvTZwdT9hd0jFBfwsr-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-8" value="&lt;h2 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;MongoDB:&amp;nbsp; &amp;nbsp;Course Structure Collection&lt;/span&gt;&lt;br&gt;&lt;/h2&gt;&lt;div&gt;The course structure defines, or outlines, the content of a course.&lt;/div&gt;&lt;div&gt;A block in this structure points to an XBlock definition. Different blocks, in the same or in different structures, can point to same definition&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="600" y="17" width="740" height="100" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;text-decoration:underline;&quot;&gt;&lt;/p&gt;&lt;span style=&quot;font-family: Verdana; font-size: 14px; text-align: center; caret-color: rgb(0, 0, 0); background-color: rgb(228, 228, 228);&quot;&gt;&lt;b style=&quot;&quot;&gt;&lt;i style=&quot;&quot;&gt;&lt;font color=&quot;#2b24f0&quot;&gt;Collection Name:&amp;nbsp; modulestore.definitions&lt;/font&gt;&lt;/i&gt;&lt;/b&gt;&lt;/span&gt;&lt;div&gt;&lt;b style=&quot;color: rgb(0, 0, 0); font-family: Verdana; font-size: 14px; text-align: center; caret-color: rgb(0, 0, 0); background-color: rgb(228, 228, 228);&quot;&gt;&lt;br&gt;&lt;/b&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;_id&lt;/font&gt;&lt;/b&gt; = ObjectId(&#39;......uuid.....&#39;)&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// &lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;[ Primary Key ]&lt;/font&gt;&lt;/b&gt; &amp;lt;--- Pointed from modulestore.structures._id&lt;br&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;fields&lt;/font&gt;&lt;/b&gt; = {...&lt;span style=&quot;background-color: initial;&quot;&gt;}&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// fields set of kinds of xblocks. It can be html content or any other data&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;block_type = &#39;XBlock/XModule type&#39;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // Example: &#39;about&#39; / &#39;pdf&#39; / &#39;html&#39; / &#39;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;scormxblock&#39; / ......&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;schema_version = 1&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Data version&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 8px;&quot;&gt;edit_info&quot; : {&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 8px;&quot;&gt;&amp;nbsp; &amp;nbsp; edited_by : user_id,&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 8px;&quot;&gt;&amp;nbsp; &amp;nbsp; edited_on&quot; : ISODate(...),&amp;nbsp;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 8px;&quot;&gt;&amp;nbsp; &amp;nbsp; previous_version : null or ObjectId(&#39;...uuid&#39;...),&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; original&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;_version&quot; : ObjectId(&#39;...uuid...&#39;)&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 8px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 8px;&quot;&gt;}&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:8px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;/div&gt;" tooltip="URL: https://docs.openedx.org/projects/edx-platform/en/latest/references/docs/xmodule/modulestore/docs/split-mongo.html#course-structures" id="XPpvTZwdT9hd0jFBfwsr-9">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=3;strokeColor=#3333FF;rounded=0;shadow=0;glass=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="1400" y="154" width="640" height="192" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fillColor=#0050ef;strokeColor=#001DBC;strokeWidth=3;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-11" target="XPpvTZwdT9hd0jFBfwsr-9" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-11" value="&lt;h2 style=&quot;margin-top: 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;MongoDB:&amp;nbsp; &amp;nbsp;Course XBlock Definitions&lt;br&gt;&lt;/span&gt;&lt;span style=&quot;font-size: 12px; font-weight: 400;&quot;&gt;XBlock definitions contain the content of each block.&lt;/span&gt;&lt;br&gt;&lt;/h2&gt;&lt;div&gt;A definition can be referenced by multiple blocks.&lt;br&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;fillColor=#0050ef;fontColor=#ffffff;strokeColor=#001DBC;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1400" y="17" width="640" height="100" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;class SplitMongoModuleStore&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;db_connection:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;MongoConnection&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;services: dict&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; // i18n / fs / user / request_cache / gating...&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;_lookup_course&lt;/font&gt;&lt;/b&gt;(course_key...):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;CourseEnvelope&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;get_course_index(course_key...): JSON object in modulestore.active_version&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;get_structure(course_key ...): JSON object in modulestore.structures&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;get_item&lt;/font&gt;&lt;/b&gt;(usage_key, depth=0...): Descriptor / XBlock&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;_load_items(course_entry, block_keys, depth=0...)&lt;span style=&quot;background-color: initial;&quot;&gt;: Descriptor / XBlock&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;create_runtime(course_entry...):&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;CachingDescriptorSystem&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&lt;b&gt;cache_items&lt;/b&gt;&lt;/font&gt;(system, base_block_ids, course_key,...): dict //&lt;/span&gt;&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;CachingDescriptorSystem&lt;/font&gt;&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;.&lt;b style=&quot;&quot;&gt;&lt;font style=&quot;&quot; color=&quot;#009900&quot;&gt;module_data&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;" tooltip="Source code:  common/lib/xmodule/xmodule/modulestore/split_mongo/split.py" id="XPpvTZwdT9hd0jFBfwsr-14">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="30" y="799" width="560" height="222" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;class DraftVersioningModuleStore&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;create_course(org, course, run, user_id,...):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;CourseDescriptor&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;get_course(course_id, depth=0,...): CourseDescriptor&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;get_item&lt;/b&gt;(...): Descriptor&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;......&lt;/span&gt;&lt;/p&gt;" tooltip="Source code: common/lib/xmodule/xmodule/modulestore/split_mongo/split_draft.py" id="XPpvTZwdT9hd0jFBfwsr-15">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="30" y="1135.5" width="360" height="110" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;CourseEnvelope&lt;/font&gt;&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;course_key: CourseKey&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;structure: JSON ( Loaded from modulestore.structures )&lt;/p&gt;" tooltip="Source code: common/lib/xmodule/xmodule/modulestore/split_mongo/__init__.py" id="XPpvTZwdT9hd0jFBfwsr-17">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="770" y="764" width="550" height="90" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-20" value="&lt;font color=&quot;#3333ff&quot;&gt;def _lookup_course(course_key):&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];whiteSpace=wrap;html=1;fillColor=#cce5ff;strokeColor=#36393d;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="34" y="584" width="1100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-21" value="index = self.&lt;b&gt;get_course_index&lt;/b&gt;(coruse_key...)" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="XPpvTZwdT9hd0jFBfwsr-20" vertex="1">
+          <mxGeometry x="10" y="33" width="290" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-22" value="structure_entry =&amp;nbsp; self.&lt;b&gt;get_structure&lt;/b&gt;(course_key, index.structure_id)" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="XPpvTZwdT9hd0jFBfwsr-20" vertex="1">
+          <mxGeometry x="288" y="33" width="412" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-23" value="Encapsulate CourseEnvelope with course_key + structure_entry" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="XPpvTZwdT9hd0jFBfwsr-20" vertex="1">
+          <mxGeometry x="688" y="33" width="402" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-24" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=0.473;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-23" target="XPpvTZwdT9hd0jFBfwsr-17" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="630" y="740" as="sourcePoint" />
+            <mxPoint x="1160" y="670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-26" value="Encapsulate" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="XPpvTZwdT9hd0jFBfwsr-24" vertex="1" connectable="0">
+          <mxGeometry x="-0.1705" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-27" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Used by&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.464;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.468;exitY=1.004;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-3" target="XPpvTZwdT9hd0jFBfwsr-20" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="270" y="560" as="sourcePoint" />
+            <mxPoint x="1160" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;class &lt;font color=&quot;#b266ff&quot;&gt;CachingDescriptorSystem&lt;/font&gt;&amp;nbsp; &amp;nbsp; ( cached by structure._id )&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;modulestore:&amp;nbsp;&lt;b style=&quot;background-color: initial; text-align: center;&quot;&gt;DraftVersioningModuleStore&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial; text-align: center;&quot;&gt;course_entry:&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;CourseEnvelope&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-align: center;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;module_data&lt;/font&gt;&lt;/b&gt;: dict&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Course JSON data loaded from MongoDB&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;load_item&lt;/font&gt;&lt;/b&gt;(usage_key,...):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;Descriptor / XBlock&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Implemented by def&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;_load_item(...)&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;get_module_data(block_key, course_key)&amp;nbsp; &amp;nbsp;// Return &amp;amp; update &lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;module_data&lt;/font&gt;&lt;/b&gt; by def cache_items(...)&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#b266ff&quot;&gt;xblock_from_json&lt;/font&gt;&lt;/b&gt;(class_, course_key, block_key...). // Return xmodule&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#9933ff&quot;&gt;construct_xblock_from_class&lt;/font&gt;&lt;/b&gt;(cls, ...): a Mixed class supported&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#00ff80&quot;&gt;XBlock.handle&lt;/font&gt;&lt;/b&gt;(handler_name,...)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" tooltip="Source code: common/lib/xmodule/xmodule/modulestore/split_mongo/caching_descriptor_system.py" id="XPpvTZwdT9hd0jFBfwsr-29">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="770" y="896" width="550" height="190" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-30" value="def _lookup_course(...) &lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Use&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-14" target="XPpvTZwdT9hd0jFBfwsr-17" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1000" y="1050" as="sourcePoint" />
+            <mxPoint x="1160" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="XPpvTZwdT9hd0jFBfwsr-31" value="def create_runtime(...) &lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Use&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-14" target="XPpvTZwdT9hd0jFBfwsr-29" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1000" y="1050" as="sourcePoint" />
+            <mxPoint x="1160" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="self.&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;cache_items&lt;/font&gt;&lt;/b&gt;(...)&lt;div&gt;Return Course JSON&lt;/div&gt;&lt;div&gt;from MongoDB&lt;/div&gt;" tooltip="&#xa;&#xa;    def cache_items(self, system, base_block_ids, course_key, depth=0, lazy=True):&#xa;        &quot;&quot;&quot;&#xa;        Handles caching of items once inheritance and any other one time&#xa;        per course per fetch operations are done.&#xa;&#xa;" id="lZ1_2r7MZ43qZYjNm-Xg-6">
+          <mxCell style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="330" y="1020" width="150" height="55" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-7" value="callback" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=5;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-29" target="lZ1_2r7MZ43qZYjNm-Xg-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="810" y="1025" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-8" value="return" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=-5;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="lZ1_2r7MZ43qZYjNm-Xg-6" target="XPpvTZwdT9hd0jFBfwsr-29" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="810" y="1095" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-10" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Implement&lt;/font&gt;&lt;/b&gt; def _lookup_course(...)" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=-0.01;entryY=0.965;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-14" target="XPpvTZwdT9hd0jFBfwsr-21" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="330" y="817" as="sourcePoint" />
+            <mxPoint x="1130" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-11" value="&lt;font color=&quot;#0000ff&quot;&gt;def get_item(usage_key...)&amp;nbsp; &amp;nbsp; &amp;nbsp; ------------&amp;gt;&amp;nbsp; &amp;nbsp; E.g.:&lt;/font&gt;&lt;span style=&quot;background-color: initial; color: rgb(0, 0, 255);&quot;&gt;&amp;nbsp;descriptor = modulestore().get_item(usage_key)&lt;/span&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=#cce5ff;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=#36393d;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="425" y="1134.75" width="1070" height="120.5" as="geometry" />
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-12" value="course_envelope =&amp;nbsp;&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;_lookup_course&lt;/font&gt;&lt;/b&gt;(course_key)&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="lZ1_2r7MZ43qZYjNm-Xg-11" vertex="1">
+          <mxGeometry x="10" y="33" width="190" height="77.5" as="geometry" />
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-13" value="In method _load_items():&lt;div&gt;&amp;nbsp; &lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;create_runtime&lt;/font&gt;&lt;/b&gt;(course_envelope)&lt;div&gt;return &lt;b&gt;CachingDescriptorSystem&lt;/b&gt; instance&lt;/div&gt;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="lZ1_2r7MZ43qZYjNm-Xg-11" vertex="1">
+          <mxGeometry x="188" y="33" width="292" height="77.5" as="geometry" />
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-14" value="Update &lt;b&gt;CachingDescriptorSystem&lt;/b&gt; .&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;module_data&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&lt;div&gt;with&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;JSON loaded from&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;MongoDB&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;by &lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;cache_items(...)&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="lZ1_2r7MZ43qZYjNm-Xg-11" vertex="1">
+          <mxGeometry x="468" y="33" width="312" height="77.5" as="geometry" />
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-18" value="Return Descriptor from&lt;div&gt;&amp;nbsp;&lt;b&gt;CachingDescriptorSystem&lt;/b&gt;.&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;load_item&lt;/font&gt;&lt;/b&gt;(...)&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="lZ1_2r7MZ43qZYjNm-Xg-11" vertex="1">
+          <mxGeometry x="768" y="33" width="292" height="77.5" as="geometry" />
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-15" value="&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;Implement&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.003;entryY=0.02;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-14" target="lZ1_2r7MZ43qZYjNm-Xg-11" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="690" y="941" as="sourcePoint" />
+            <mxPoint x="850" y="940" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-19" value="&lt;font color=&quot;#0000ff&quot;&gt;def get_module(user, request, usage_key...)&lt;/font&gt;" style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=#cce5ff;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=#36393d;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="431" y="1290" width="1060" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-20" value="descriptor =&amp;nbsp;&lt;div&gt;modulestore().&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;get_item&lt;/font&gt;&lt;/b&gt;(usage_key)&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="lZ1_2r7MZ43qZYjNm-Xg-19" vertex="1">
+          <mxGeometry x="10" y="33" width="240" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-21" value="def &lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;get_module_for_descriptor&lt;/font&gt;&lt;/b&gt;(user, request, descriptor...)&lt;div&gt;call&amp;nbsp;def &lt;b&gt;&lt;font color=&quot;#009900&quot;&gt;get_module_for_descriptor_internal&lt;/font&gt;&lt;/b&gt;(user, descriptor...):&lt;/div&gt;&lt;div&gt;1) system, student_data = &lt;b&gt;&lt;font color=&quot;#00994d&quot;&gt;get_module_system_for_user&lt;/font&gt;&lt;/b&gt;(...)&lt;/div&gt;&lt;div&gt;2) set Descriptor to act as an XModule by bind_for_student(...)&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="lZ1_2r7MZ43qZYjNm-Xg-19" vertex="1">
+          <mxGeometry x="238" y="33" width="412" height="77" as="geometry" />
+        </mxCell>
+        <UserObject label="1) Return instances of &lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;LmsModuleSystem&lt;/font&gt;&lt;/b&gt; and &lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;LmsFieldData&lt;/font&gt;&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;from&amp;nbsp;&lt;/span&gt;&lt;div&gt;def &lt;b&gt;&lt;font color=&quot;#009900&quot;&gt;get_module_system_for_user&lt;/font&gt;&lt;/b&gt;(user, student_data, descriptor)&amp;nbsp;&lt;/div&gt;&lt;div&gt;2) In caller, bind them with &quot;descriptor.&lt;b&gt;bind_for_student&lt;/b&gt;(...)&quot;&lt;/div&gt;" tooltip="Source code : lms/djangoapps/courseware/module_render.py&#xa;&#xa;&#xa;def get_module_for_descriptor_internal(user, descriptor, student_data, course_id,  # pylint: disable=invalid-name&#xa;                                       track_function, xqueue_callback_url_prefix, request_token,&#xa;                                       position=None, wrap_xmodule_display=True, grade_bucket_type=None,&#xa;                                       static_asset_path=&#39;&#39;, user_location=None, disable_staff_debug_info=False,&#xa;                                       course=None):&#xa;    &quot;&quot;&quot;&#xa;    Actually implement get_module, without requiring a request.&#xa;&#xa;    See get_module() docstring for further details.&#xa;&#xa;    Arguments:&#xa;        request_token (str): A unique token for this request, used to isolate xblock rendering&#xa;    &quot;&quot;&quot;&#xa;&#xa;    (system, student_data) = get_module_system_for_user(&#xa;        user=user,&#xa;        student_data=student_data,  # These have implicit user bindings, the rest of args are considered not to&#xa;        descriptor=descriptor,&#xa;        course_id=course_id,&#xa;        track_function=track_function,&#xa;        xqueue_callback_url_prefix=xqueue_callback_url_prefix,&#xa;        position=position,&#xa;        wrap_xmodule_display=wrap_xmodule_display,&#xa;        grade_bucket_type=grade_bucket_type,&#xa;        static_asset_path=static_asset_path,&#xa;        user_location=user_location,&#xa;        request_token=request_token,&#xa;        disable_staff_debug_info=disable_staff_debug_info,&#xa;        course=course&#xa;    )&#xa;&#xa;    descriptor.bind_for_student(&#xa;        system,&#xa;        user.id,&#xa;        [&#xa;            partial(OverrideFieldData.wrap, user, course),&#xa;            partial(LmsFieldData, student_data=student_data),&#xa;        ],&#xa;    )&#xa;&#xa;    descriptor.scope_ids = descriptor.scope_ids._replace(user_id=user.id)&#xa;&#xa;" id="lZ1_2r7MZ43qZYjNm-Xg-22">
+          <mxCell style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="lZ1_2r7MZ43qZYjNm-Xg-19" vertex="1">
+            <mxGeometry x="638" y="33" width="412" height="77" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-23" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Use&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.005;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.005;entryY=0.977;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="lZ1_2r7MZ43qZYjNm-Xg-19" target="lZ1_2r7MZ43qZYjNm-Xg-12" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="849" y="1290" as="sourcePoint" />
+            <mxPoint x="1009" y="1290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;LmsFieldData&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;_authored_data:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;KvsFieldData&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;_student_data:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;KvsFieldData&amp;nbsp; &amp;nbsp; &amp;nbsp;// Access students data in&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;Mysql&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;_scope_mappings: dict&amp;nbsp; &amp;nbsp; &amp;nbsp;// &amp;lt;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Scopes: FieldData instances&amp;gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;{&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; Scope.content: authored_data,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; Scope.settings: authored_data,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; Scope.parent: authored_data,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; Scope.children: authored_data,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; Scope.user_state_summary: student_data,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; Scope.user_state: student_data,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; Scope.user_info: student_data,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&amp;nbsp; &amp;nbsp; Scope.preferences: student_data,&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;}&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" tooltip="Source code: lms/djangoapps/lms_xblock/field_data.py" id="lZ1_2r7MZ43qZYjNm-Xg-24">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="30" y="1290.5" width="360" height="238" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-25" value="&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;Use&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.017;exitY=0.961;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="lZ1_2r7MZ43qZYjNm-Xg-20" target="lZ1_2r7MZ43qZYjNm-Xg-24" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="620" y="1400" as="sourcePoint" />
+            <mxPoint x="2080" y="1200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;LmsModuleSystem&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;_services&lt;/span&gt;: dict&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Supported: fs / completion / i18n / ...&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ handler_url(): Type&lt;/p&gt;" tooltip="Source code: lms/djangoapps/lms_xblock/runtime.py" id="lZ1_2r7MZ43qZYjNm-Xg-26">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="444" y="1447" width="360" height="90" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="lZ1_2r7MZ43qZYjNm-Xg-27" value="&lt;b&gt;&lt;font color=&quot;#cc0000&quot;&gt;Use&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1;entryY=0;entryDx=0;entryDy=0;exitX=0.002;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="lZ1_2r7MZ43qZYjNm-Xg-22" target="lZ1_2r7MZ43qZYjNm-Xg-26" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1699" y="1400" as="sourcePoint" />
+            <mxPoint x="1859" y="1400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;b&gt;class&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;&amp;nbsp;&lt;font color=&quot;#3333ff&quot;&gt;PreviewModuleSystem&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;_services&lt;/span&gt;: dict&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Supported: fs / ...&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ handler_url(): Type&lt;/p&gt;" tooltip="Source code: cms/djangoapps/contentstore/views/preview.py" id="bSISfmW-ia09FA_OU7SG-0">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="443" y="1543" width="361" height="90" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#b266ff&quot;&gt;ModuleSystem&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ user_id: int&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;user_is_staff: bool&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ _services&lt;/span&gt;: dict&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Supported: fs / comletion / i18n /...&lt;br&gt;+ course_id: CourseKey&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ render_template: function&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;//&amp;nbsp;takes (template_file, context) and returns rendered html&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;+ &lt;/font&gt;&lt;b style=&quot;color: rgb(0, 0, 255);&quot;&gt;get_module&lt;/b&gt;: function&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; //&amp;nbsp;takes a descriptor and returns a corresponding module instance object&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ filestore: OSFS&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;descriptor_runtime:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;DescriptorSystem&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ handler_url(block, handler_name...): str&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;handle(block, handler_name, request, suffix=&#39;&#39;)&lt;/p&gt;" tooltip="Source code: cms/djangoapps/contentstore/views/preview.py&#xa;&#xa;&#xa;ModuleSystem objects are passed to x_modules to provide access to system functionality.&#xa;&#xa;&#xa;class ModuleSystem(MetricsMixin, ConfigurableFragmentWrapper, Runtime):&#xa;    @contract(descriptor_runtime=&#39;DescriptorSystem&#39;)&#xa;    def __init__(&#xa;            self, static_url, track_function, get_module, render_template,&#xa;            replace_urls, descriptor_runtime, user=None, filestore=None,&#xa;            debug=False, hostname=&quot;&quot;, xqueue=None, publish=None, node_path=&quot;&quot;,&#xa;            anonymous_student_id=&#39;&#39;, course_id=None,&#xa;            cache=None, can_execute_unsafe_code=None, replace_course_urls=None,&#xa;            replace_jump_to_id_urls=None, error_descriptor_class=None, get_real_user=None,&#xa;            field_data=None, get_user_role=None, rebind_noauth_module_to_user=None,&#xa;            user_location=None, get_python_lib_zip=None, **kwargs):&#xa;&#xa;It&#39;s kind of class Runtime.&#xa;&#xa;" id="bSISfmW-ia09FA_OU7SG-1">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;strokeColor=#CC0000;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="882" y="1444" width="606" height="193" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-8" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="XPpvTZwdT9hd0jFBfwsr-14" target="XPpvTZwdT9hd0jFBfwsr-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="90" y="1099" as="sourcePoint" />
+            <mxPoint x="250" y="1099" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-9" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-8" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-10" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-8" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;font color=&quot;#0000ff&quot;&gt;Access XBlock URL handle :&amp;nbsp; &amp;nbsp;^courses/{course_key}/xblock/{usage_key}/handler/(?P&amp;lt;handler&amp;gt;[^/]*)(?:/(?P&amp;lt;suffix&amp;gt;.*))?$&lt;/font&gt;" tooltip="" id="bSISfmW-ia09FA_OU7SG-11">
+          <mxCell style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=#fad9d5;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=none;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="2154" y="1030" width="960" height="130" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-12" value="&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;handle_xblock_callback&lt;/font&gt;&lt;/b&gt;(request, course_id,&amp;nbsp;&lt;div&gt;usage_id, handler, suffix)&lt;/div&gt;&lt;div&gt;&lt;u&gt;&lt;i&gt;CALL&lt;/i&gt;&lt;/u&gt;&amp;nbsp; ------&amp;gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;_invoke_xblock_handler&lt;/b&gt;(request, course_id, usage_id, handler, suffix, course_descriptor)&lt;br&gt;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="bSISfmW-ia09FA_OU7SG-11" vertex="1">
+          <mxGeometry x="10" y="33" width="280" height="87" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-13" value="&lt;b&gt;In _invoke_xblock_handler(...) :&lt;/b&gt;&lt;div&gt;1) module=get_module_by_usage_id(course_id, usage_id, course_descriptor, ...)&lt;/div&gt;&lt;div&gt;2) web_response = &lt;b&gt;module&lt;/b&gt;.handle(handler, req, suffix)&lt;br&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="bSISfmW-ia09FA_OU7SG-11" vertex="1">
+          <mxGeometry x="278" y="33" width="342" height="87" as="geometry" />
+        </mxCell>
+        <UserObject label="1) &lt;b style=&quot;color: rgb(51, 51, 255);&quot;&gt;HandlersMixin&lt;/b&gt;.&lt;b style=&quot;color: rgb(51, 255, 51);&quot;&gt;handle&lt;/b&gt;(handler_name, request, suffix)&lt;div&gt;2) &lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;Runtime&lt;/font&gt;&lt;/b&gt;.handle(block, handler_name, request)&lt;/div&gt;" tooltip="Source : xblock/mixins.py&#xa;&#xa;&#xa;    def HandlersMixin.handle(self, handler_name, request, suffix=&#39;&#39;):&#xa;        &quot;&quot;&quot;Handle `request` with this block&#39;s runtime.&quot;&quot;&quot;&#xa;        return self.runtime.handle(self, handler_name, request, suffix)&#xa;&#xa;&#xa;&#xa;    def Runtime.handle(self, block, handler_name, request, suffix=&#39;&#39;):&#xa;        &quot;&quot;&quot;&#xa;        Handles any calls to the specified `handler_name`.&#xa;&#xa;        Provides a fallback handler if the specified handler isn&#39;t found.&#xa;&#xa;        :param handler_name: The name of the handler to call&#xa;        :param request: The request to handle&#xa;        :type request: webob.Request&#xa;        :param suffix: The remainder of the url, after the handler url prefix, if available&#xa;        &quot;&quot;&quot;&#xa;        handler = getattr(block, handler_name, None)&#xa;        if handler and getattr(handler, &#39;_is_xblock_handler&#39;, False):&#xa;            # Cache results of the handler call for later saving&#xa;            results = handler(request, suffix)&#xa;        else:&#xa;            fallback_handler = getattr(block, &quot;fallback_handler&quot;, None)&#xa;            if fallback_handler and getattr(fallback_handler, &#39;_is_xblock_handler&#39;, False):&#xa;                # Cache results of the handler call for later saving&#xa;                results = fallback_handler(handler_name, request, suffix)&#xa;            else:&#xa;                raise NoSuchHandlerError(&quot;Couldn&#39;t find handler %r for %r&quot; % (handler_name, block))&#xa;&#xa;        # Write out dirty fields&#xa;        block.save()&#xa;        return results&#xa;&#xa;&#xa;" id="bSISfmW-ia09FA_OU7SG-14">
+          <mxCell style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;strokeColor=default;" parent="bSISfmW-ia09FA_OU7SG-11" vertex="1">
+            <mxGeometry x="608" y="33" width="342" height="87" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;i&gt;[XBlock] //&lt;/i&gt;&lt;b&gt;&amp;nbsp; class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;HandlersMixin&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;_services&lt;/span&gt;: dict&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Supported: fs / ...&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ json_handler(func): Type&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;handler(func): Type&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#00ff00&quot;&gt;handle&lt;/font&gt;&lt;/b&gt;(handler_name, request, suffix): Type&lt;/p&gt;" tooltip="Source code: xblock/mixins.py&#xa;&#xa;&#xa;class HandlersMixin(object):&#xa;    &quot;&quot;&quot;&#xa;    A mixin provides all of the machinery needed for working with XBlock-style handlers.&#xa;    &quot;&quot;&quot;&#xa;    ......&#xa;&#xa;" id="bSISfmW-ia09FA_OU7SG-15">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;strokeColor=#67AB9F;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="1615" y="897" width="361" height="120" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;i&gt;[XBlock]&lt;/i&gt;&lt;b&gt;&amp;nbsp; // class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;XBlock&lt;/font&gt;&amp;nbsp;&lt;/b&gt;( ..., HandlersMixin,...)&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+_services&lt;/span&gt;: dict&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Supported: fs / ...&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+runtime: function&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;// Subclass of DescriptorSystem&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ json_handler(func): Type&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;handler(func): Type&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#33ff33&quot;&gt;handle&lt;/font&gt;&lt;/b&gt;(handler_name, request,...): Type&amp;nbsp; // Call runtime.handle&lt;/p&gt;" tooltip="Source code: xblock/core.py&#xa;&#xa;&#xa;class XBlock(XmlSerializationMixin, HierarchyMixin, ScopedStorageMixin, RuntimeServicesMixin, HandlersMixin,&#xa;             IndexInfoMixin, ViewsMixin, SharedBlockBase):&#xa;    ......&#xa;    def render(self, view, context=None):&#xa;        &quot;&quot;&quot;Render `view` with this block&#39;s runtime and the supplied `context`&quot;&quot;&quot;&#xa;        return self.runtime.render(self, view, context)&#xa;&#xa;&#xa;&#xa;" id="bSISfmW-ia09FA_OU7SG-16">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;strokeColor=#67AB9F;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="1615" y="1047" width="361" height="133" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;i&gt;[XBlock&lt;/i&gt;&lt;b&gt;] //&amp;nbsp; class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 18px;&quot; color=&quot;#9933ff&quot;&gt;Runtime&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;construct_xblock(block_type...): Type&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;construct_xblock_from_class&lt;/font&gt;&lt;/b&gt;(cls, ...): a Mixed class supported &lt;b&gt;&lt;font color=&quot;#00ff80&quot;&gt;XBlock.handle&lt;/font&gt;&lt;/b&gt;(handler_name,...)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ &lt;b&gt;&lt;font color=&quot;#33ff33&quot;&gt;handle&lt;/font&gt;&lt;/b&gt;(block, handler_name, request, suffix=&#39;&#39;)&lt;/span&gt;&lt;br&gt;&lt;/p&gt;" tooltip="Source code: xblock/runtime.py" id="bSISfmW-ia09FA_OU7SG-20">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;strokeColor=#67AB9F;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="1435.25" y="758" width="563.75" height="92" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;font color=&quot;#0000ff&quot;&gt;def&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;font color=&quot;#9933ff&quot;&gt;construct_xblock_from_class&lt;/font&gt;&lt;font color=&quot;#0000ff&quot;&gt;(block_class...) /&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;span style=&quot;color: rgb(0, 0, 255); text-align: left;&quot;&gt;construct_xblock(block_type...)&lt;/span&gt;" tooltip="Source code: xblock/runtime.py" id="bSISfmW-ia09FA_OU7SG-21">
+          <mxCell style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=#cce5ff;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=#36393d;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];whiteSpace=wrap;html=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="2157" y="1190" width="660" height="100" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-22" value="&lt;b&gt;&lt;i&gt;&lt;font color=&quot;#3333ff&quot;&gt;Runtime&lt;/font&gt;&lt;/i&gt;&lt;/b&gt;.mixologist =&lt;div&gt;Mixologist(&lt;span style=&quot;text-align: left;&quot;&gt;settings.&lt;/span&gt;&lt;span style=&quot;text-align: left; background-color: initial;&quot;&gt;&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;u&gt;XBLOCK_MIXINS&lt;/u&gt;&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;)&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="bSISfmW-ia09FA_OU7SG-21" vertex="1">
+          <mxGeometry x="10" y="33" width="270" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-23" value="Mix &#39;block_class&#39; with classes&amp;nbsp;&lt;div&gt;defined in&amp;nbsp;&lt;b style=&quot;background-color: initial; text-align: left;&quot;&gt;XBLOCK_MIXINS&lt;/b&gt;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="bSISfmW-ia09FA_OU7SG-21" vertex="1">
+          <mxGeometry x="268" y="33" width="212" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-24" value="New instance of this new&amp;nbsp;&lt;div&gt;mixed &#39;block_class&#39;&lt;/div&gt;" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" parent="bSISfmW-ia09FA_OU7SG-21" vertex="1">
+          <mxGeometry x="468" y="33" width="182" height="57" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;div&gt;Edx-Platform / &lt;u&gt;Settings.py&lt;/u&gt;&amp;nbsp; :&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;i&gt;settings&lt;/i&gt;.&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;&lt;u&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;XBLOCK_MIXINS&lt;/font&gt;&lt;/u&gt;&lt;/b&gt; = (&lt;/span&gt;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#66ff66&quot;&gt;XModuleMixin&lt;/font&gt;&lt;/b&gt;,&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;LmsBlockMixin,&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;InheritanceMixin&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;,...)&lt;/span&gt;&lt;/div&gt;" tooltip="Source code: &#xa; - lms/envs/common.py&#xa; - cms/envs/common.py" id="bSISfmW-ia09FA_OU7SG-25">
+          <mxCell style="label;fontStyle=0;align=left;verticalAlign=top;overflow=hidden;spacingLeft=28;spacingRight=4;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;imageWidth=16;imageHeight=16;whiteSpace=wrap;html=1;image=img/clipart/Gear_128x128.png;dashed=1;strokeWidth=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="2157" y="1336" width="503" height="70" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-27" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Use&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=-0.012;exitY=0.956;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.012;entryY=0.086;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-22" target="bSISfmW-ia09FA_OU7SG-25" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1966.5" y="1336" as="sourcePoint" />
+            <mxPoint x="2126.5" y="1336" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-28" value="&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Implements&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.003;entryY=0.04;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-20" target="bSISfmW-ia09FA_OU7SG-21" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1925.5" y="1332" as="sourcePoint" />
+            <mxPoint x="2275" y="1134.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;b&gt;class&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;&amp;nbsp;&lt;font color=&quot;#0000ff&quot;&gt;XModuleMixin&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;( XBlock,...)&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+&amp;nbsp;&lt;b&gt;_runtime&lt;/b&gt;:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;DescriptorSystem&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;xmodule_runtime&lt;/b&gt;:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;ModuleSystem&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;hr style=&quot;border-style: solid;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+runtime(descritor_system): None&amp;nbsp; &amp;nbsp; &amp;nbsp; // Assign DescriptorSystem&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+runtime() :&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#b266ff&quot;&gt;CombinedSystem&lt;/font&gt;&lt;/b&gt;(xmodule_runtime, _runtime)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+&lt;b&gt;&lt;font color=&quot;#0000ff&quot;&gt;bind_for_student&lt;/font&gt;&lt;/b&gt;(xmodule_runtime, user_id...):&lt;/p&gt;" tooltip="Source code: common/lib/xmodule/xmodule/x_module.py&#xa;&#xa;&#xa;class XModuleMixin(XModuleFields, XBlock):&#xa;&#xa;    def bind_for_student(self, xmodule_runtime, user_id, wrappers=None):&#xa;        &quot;&quot;&quot;&#xa;        Set up this XBlock to act as an XModule instead of an XModuleDescriptor.&#xa;&#xa;    ......&#xa;&#xa;&#xa;&#xa;&#xa;" id="bSISfmW-ia09FA_OU7SG-29">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;strokeColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="1616.75" y="1213" width="357.5" height="130" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;XModule&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &lt;b&gt;descriptor&lt;/b&gt;: Descriptor&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ runtime():&amp;nbsp;&lt;b style=&quot;background-color: initial;&quot;&gt;&lt;font color=&quot;#b266ff&quot;&gt;CombinedSystem&lt;/font&gt;&lt;/b&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font color=&quot;#ffffff&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;student_view(context) : str&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" tooltip="Source code: common/lib/xmodule/xmodule/x_module.py&#xa;&#xa;&#xa;class XModule(HTMLSnippet, XModuleMixin):&#xa;&#xa;    def student_view(self, context):&#xa;        &quot;&quot;&quot;&#xa;        Return a fragment with the html from this XModule&#xa;&#xa;        Doesn&#39;t yet add any of the javascript to the fragment, nor the css.&#xa;        Also doesn&#39;t expect any javascript binding, yet.&#xa;&#xa;        Makes no use of the context parameter&#xa;        &quot;&quot;&quot;&#xa;        return Fragment(self.get_html())&#xa;&#xa;    ......&#xa;&#xa;" id="bSISfmW-ia09FA_OU7SG-33">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;strokeColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="1870.5" y="1433" width="208.5" height="101" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;XModuleDescriptor&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ module_class: subclass of XModule&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &lt;b&gt;_xmodule&lt;/b&gt;(): subclass of XModule&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ studio_view(_context): str&lt;br&gt;&lt;/p&gt;" tooltip="Source : common/lib/xmodule/xmodule/x_module.py&#xa;&#xa;&#xa;class XModuleDescriptor(HTMLSnippet, ResourceTemplates, XModuleMixin):&#xa;&#xa;    def studio_view(self, _context):&#xa;        &quot;&quot;&quot;&#xa;        Return a fragment with the html from this XModuleDescriptor&#39;s editing view&#xa;&#xa;        Doesn&#39;t yet add any of the javascript to the fragment, nor the css.&#xa;        Also doesn&#39;t expect any javascript binding, yet.&#xa;&#xa;        Makes no use of the context parameter&#xa;        &quot;&quot;&quot;&#xa;        return Fragment(self.get_html())&#xa;&#xa;    ......&#xa;&#xa;" id="bSISfmW-ia09FA_OU7SG-34">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;strokeColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="1871.5" y="1564" width="208.5" height="101" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-35" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.652;exitY=1.008;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-29" target="bSISfmW-ia09FA_OU7SG-34" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1521" y="1540" as="sourcePoint" />
+            <mxPoint x="1681" y="1540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-36" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-35" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-37" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-35" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-38" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-29" target="bSISfmW-ia09FA_OU7SG-33" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1931" y="1540" as="sourcePoint" />
+            <mxPoint x="2091" y="1540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-39" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-38" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-40" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-38" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#b266ff&quot;&gt;DescriptorSystem&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;load_item&lt;/font&gt;&lt;/b&gt;: function&amp;nbsp; &amp;nbsp; &amp;nbsp;// In Subclass of&amp;nbsp;&lt;span style=&quot;background-color: initial; text-align: center;&quot;&gt;&lt;b style=&quot;color: rgb(178, 102, 255);&quot;&gt;CachingDescriptorSystem&lt;/b&gt;&lt;font color=&quot;#ffffff&quot;&gt;, it refer to _load_item(...)&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ get_block(self, usage_id...): Descriptor&lt;/p&gt;" tooltip="Source : common/lib/xmodule/xmodule/x_module.py&#xa;&#xa;&#xa;It&#39;s to be used with :class:`XModuleDescriptor`&#xa;&#xa;&#xa;class DescriptorSystem(MetricsMixin, ConfigurableFragmentWrapper, Runtime):&#xa;    ......&#xa;&#xa;&#xa;It&#39;s kind of class Runtime .&#xa;" id="bSISfmW-ia09FA_OU7SG-42">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;strokeColor=#FF3333;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="1435.25" y="628" width="565.75" height="90" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-43" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;MakoDescriptorSystem&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ render_template: function of rendering&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;+&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;construct_xblock_from_class&lt;/font&gt;&lt;/b&gt;(cls, ...): a Mixed class supported&amp;nbsp;&lt;b&gt;&lt;font color=&quot;#00ff80&quot;&gt;XBlock.handle&lt;/font&gt;&lt;/b&gt;(handler_name,...)&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="1413.13" y="497.5" width="610" height="82.5" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-44" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-20" target="bSISfmW-ia09FA_OU7SG-42" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1925" y="1097.5" as="sourcePoint" />
+            <mxPoint x="1718.125" y="763" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-45" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-44" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-206" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-46" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-44" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-47" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-42" target="bSISfmW-ia09FA_OU7SG-43" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1718.125" y="584" as="sourcePoint" />
+            <mxPoint x="2390" y="686" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-48" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-47" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint y="-7" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-49" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-47" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-50" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-43" target="XPpvTZwdT9hd0jFBfwsr-29" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1620" y="929.5" as="sourcePoint" />
+            <mxPoint x="1780" y="929.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-51" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-50" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-52" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="bSISfmW-ia09FA_OU7SG-50" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="bSISfmW-ia09FA_OU7SG-53" value="&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;Use&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.497;exitY=0.977;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.998;entryY=0.01;entryDx=0;entryDy=0;entryPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-14" target="bSISfmW-ia09FA_OU7SG-21" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="2134" y="1256" as="sourcePoint" />
+            <mxPoint x="2294" y="1256" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-0" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-1" target="lZ1_2r7MZ43qZYjNm-Xg-26" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-68" y="1815" as="sourcePoint" />
+            <mxPoint x="92" y="1815" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-1" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-0" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-2" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-0" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-3" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-1" target="bSISfmW-ia09FA_OU7SG-0" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-8" y="1825" as="sourcePoint" />
+            <mxPoint x="152" y="1825" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-4" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-3" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-5" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-3" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;class&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;XmlDescriptor&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ resources_dir: str&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ export_to_xml(): str&lt;/p&gt;" tooltip="Source: common/lib/xmodule/xmodule/x_module.py&#xa;&#xa;&#xa;class XmlDescriptor(XmlParserMixin, XModuleDescriptor):&#xa;    ......&#xa;&#xa;" id="WCvGNAh7fgvQHPrr3F-r-6">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;strokeWidth=5;strokeColor=#FF3333;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+            <mxGeometry x="1869" y="1699" width="214" height="90" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-7" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-34" target="WCvGNAh7fgvQHPrr3F-r-6" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1545" y="1678" as="sourcePoint" />
+            <mxPoint x="1705" y="1678" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-8" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-7" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-9" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-7" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-10" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;Plugin&lt;/u&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;SequenceDescriptor&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ resources_dir: str&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ export_to_xml(): str&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="2163" y="1895" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-11" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WCvGNAh7fgvQHPrr3F-r-6" target="WCvGNAh7fgvQHPrr3F-r-10" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1017" y="1666" as="sourcePoint" />
+            <mxPoint x="1177" y="1666" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-12" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-11" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-13" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-11" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-14" value="&lt;p style=&quot;margin: 4px 0px 0px; text-align: center;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;Plugin&lt;/u&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;PollDescriptor&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ module_class: subclass of XModule&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ definition_to_xml(): str&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="2163" y="1778" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;Plugin&lt;/u&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;PollModule&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ descriptor: subclass of Descriptor&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ handle_ajax():&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;str&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="2159.25" y="1539" width="223.75" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-16" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-33" target="WCvGNAh7fgvQHPrr3F-r-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1917" y="1716" as="sourcePoint" />
+            <mxPoint x="2077" y="1716" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-17" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-16" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-18" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-16" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-19" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="WCvGNAh7fgvQHPrr3F-r-6" target="WCvGNAh7fgvQHPrr3F-r-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1017" y="1726" as="sourcePoint" />
+            <mxPoint x="1127" y="1657" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-20" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-19" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-21" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-19" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-22" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;u&gt;Plugin&lt;/u&gt;: &lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;PollModule&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ descriptor: subclass of Descriptor&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ handle_ajax():&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;str&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="2159.25" y="1429" width="223.75" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-23" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-33" target="WCvGNAh7fgvQHPrr3F-r-22" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2027" y="1706" as="sourcePoint" />
+            <mxPoint x="2187" y="1706" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-24" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-23" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-25" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-23" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-28" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-15" target="bSISfmW-ia09FA_OU7SG-16" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1654" y="1017" as="sourcePoint" />
+            <mxPoint x="1772.5" y="1007" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-29" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-28" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-30" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-28" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-31" value="&lt;font color=&quot;#ff0000&quot;&gt;&lt;b&gt;Use&lt;/b&gt;&lt;/font&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=1;entryY=1;entryDx=0;entryDy=0;exitX=0.01;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-25" target="bSISfmW-ia09FA_OU7SG-29" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="2200" y="1320" as="sourcePoint" />
+            <mxPoint x="2134" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-32" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-16" target="bSISfmW-ia09FA_OU7SG-29" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1549" y="1239" as="sourcePoint" />
+            <mxPoint x="1709" y="1239" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-33" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-32" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-34" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-32" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-35" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;u&gt;Plugin&lt;/u&gt;:&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;MakoModuleDescriptor&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ descriptor: subclass of Descriptor&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ handle_ajax():&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;str&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;dashed=1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1">
+          <mxGeometry x="2163" y="1659" width="223.75" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-36" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;exitX=1;exitY=0.75;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-34" target="WCvGNAh7fgvQHPrr3F-r-35" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1827" y="1647" as="sourcePoint" />
+            <mxPoint x="1987" y="1647" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-37" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-36" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-38" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-36" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-39" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;exitX=0.147;exitY=0.983;exitDx=0;exitDy=0;exitPerimeter=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-20" target="bSISfmW-ia09FA_OU7SG-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1655" y="1240" as="sourcePoint" />
+            <mxPoint x="1815" y="1240" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-40" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-39" connectable="0" vertex="1">
+          <mxGeometry x="-1" relative="1" as="geometry">
+            <mxPoint x="-206" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-41" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" parent="WCvGNAh7fgvQHPrr3F-r-39" connectable="0" vertex="1">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="WCvGNAh7fgvQHPrr3F-r-43" value="&lt;font color=&quot;#ff3333&quot;&gt;&lt;b&gt;Use&lt;/b&gt;&lt;/font&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-29" target="WCvGNAh7fgvQHPrr3F-r-42" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1761" y="1440" as="sourcePoint" />
+            <mxPoint x="1921" y="1440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="N4uoPhiA4U3riLwmGXqs-1" value="" style="group;strokeWidth=10;strokeColor=#9933FF;dashed=1;dashPattern=1 1;" parent="WIyWlLk6GJQsqaUBKTNV-1" vertex="1" connectable="0">
+          <mxGeometry x="1553" y="1380" width="280" height="443" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;class&lt;/i&gt;&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#9933ff&quot;&gt;CombinedSystem&lt;/font&gt;&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ _module_system:&amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;ModuleSystem&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;_descriptor_system:&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;DescriptorSystem&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ service():&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;return service from runtimes&lt;/span&gt;&lt;/p&gt;" tooltip="Source code : common/lib/xmodule/xmodule/x_module.py&#xa;&#xa;&#xa;&#xa;    This class is a shim to allow both pure XBlocks and XModuleDescriptors&#xa;    that have been bound as XModules to access both the attributes of ModuleSystem&#xa;    and of DescriptorSystem as a single runtime.&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;&#xa;    def __init__(self, module_system, descriptor_system):&#xa;        # These attributes are set directly to __dict__ below to avoid a recursion in getattr/setattr.&#xa;        self._module_system = module_system&#xa;        self._descriptor_system = descriptor_system&#xa;&#xa;&#xa;&#xa;    def __getattr__(self, name):&#xa;        &quot;&quot;&quot;&#xa;        If the ModuleSystem doesn&#39;t have an attribute, try returning the same attribute from the&#xa;        DescriptorSystem, instead. This allows XModuleDescriptors that are bound as XModules&#xa;        to still function as XModuleDescriptors.&#xa;        &quot;&quot;&quot;&#xa;        # First we try a lookup in the module system...&#xa;        try:&#xa;            return getattr(self._module_system, name)&#xa;        except AttributeError:&#xa;            return getattr(self._descriptor_system, name)&#xa;&#xa;&#xa;&#xa;" id="WCvGNAh7fgvQHPrr3F-r-42">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" parent="N4uoPhiA4U3riLwmGXqs-1" vertex="1">
+            <mxGeometry x="41" y="59" width="224" height="90" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="N4uoPhiA4U3riLwmGXqs-0" value="How we assemble&amp;nbsp; &amp;nbsp; ModuleSystem&amp;nbsp; +&amp;nbsp; DescriptorSystem" style="swimlane;horizontal=0;whiteSpace=wrap;html=1;dashed=1;dashPattern=1 1;strokeColor=#0000FF;strokeWidth=2;" parent="N4uoPhiA4U3riLwmGXqs-1" vertex="1">
+          <mxGeometry x="10" y="31" width="266" height="380" as="geometry" />
+        </mxCell>
+        <mxCell id="N4uoPhiA4U3riLwmGXqs-2" value="1) Set &#39;&lt;span style=&quot;text-align: left; text-wrap: wrap;&quot;&gt;&lt;b&gt;_descriptor_system&lt;/b&gt;&#39; refered to&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: left; text-wrap: wrap;&quot;&gt;&#39;XModuleMixin._runtime&#39; in function&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: rgb(153, 51, 255); font-weight: 700; text-align: left; text-wrap: wrap;&quot;&gt;construct_xblock_from_class( )&lt;/span&gt;&lt;span style=&quot;text-align: left; text-wrap: wrap;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="N4uoPhiA4U3riLwmGXqs-0" vertex="1">
+          <mxGeometry x="26" y="158" width="230" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="N4uoPhiA4U3riLwmGXqs-3" value="2) Set &#39;&lt;span style=&quot;text-align: left; text-wrap: wrap;&quot;&gt;&lt;b&gt;_module_system&lt;/b&gt;&#39; refered to&amp;nbsp;&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;text-wrap: wrap;&quot;&gt;&#39;XModuleMixin.&amp;nbsp;xmodule_runtime&#39;&amp;nbsp;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;text-wrap: wrap;&quot;&gt;in method&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;b style=&quot;text-align: left; text-wrap: wrap;&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;XModuleMixin.&lt;/font&gt;&lt;/b&gt;&lt;b style=&quot;background-color: initial; text-wrap: wrap; text-align: left;&quot;&gt;&lt;font color=&quot;#0000ff&quot;&gt;&amp;nbsp;bind_for_student( )&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial; text-wrap: wrap; text-align: left;&quot;&gt;called by function&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial; text-align: center; text-wrap: wrap;&quot;&gt;&lt;font color=&quot;#009900&quot;&gt;get_module_for_descriptor_internal( )&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;b style=&quot;background-color: initial; text-align: center; text-wrap: wrap;&quot;&gt;&lt;font color=&quot;#009900&quot;&gt;&amp;lt;----- get_module(...)&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="N4uoPhiA4U3riLwmGXqs-0" vertex="1">
+          <mxGeometry x="26" y="251" width="240" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-0" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;u&gt;Plugin&lt;/u&gt;: &lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;ScormXBlock&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2155" y="900" width="223.75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;u&gt;Plugin&lt;/u&gt;: &lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;ILTXBlock&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2155" y="960" width="223.75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;u&gt;Plugin&lt;/u&gt;: &lt;b&gt;class&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;PdfBlock&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;dashed=1;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="2155" y="840" width="223.75" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-3" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-16" target="KoLSAgjciGVr8KhCSaoN-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2090" y="1050" as="sourcePoint" />
+            <mxPoint x="2250" y="1050" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-4" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="KoLSAgjciGVr8KhCSaoN-3">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-5" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="KoLSAgjciGVr8KhCSaoN-3">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-6" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-16" target="KoLSAgjciGVr8KhCSaoN-0">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2090" y="1150" as="sourcePoint" />
+            <mxPoint x="2250" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-7" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="KoLSAgjciGVr8KhCSaoN-6">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-8" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="KoLSAgjciGVr8KhCSaoN-6">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-9" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="WIyWlLk6GJQsqaUBKTNV-1" source="bSISfmW-ia09FA_OU7SG-16" target="KoLSAgjciGVr8KhCSaoN-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2090" y="1150" as="sourcePoint" />
+            <mxPoint x="2250" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-10" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="KoLSAgjciGVr8KhCSaoN-9">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-11" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="KoLSAgjciGVr8KhCSaoN-9">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KoLSAgjciGVr8KhCSaoN-12" value="&lt;div&gt;&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;students data&lt;/font&gt;&lt;/b&gt;&lt;/div&gt;&lt;b&gt;&lt;font color=&quot;#ff0000&quot;&gt;Mysql&lt;/font&gt;&lt;/b&gt;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;strokeWidth=5;strokeColor=#3333FF;" vertex="1" parent="WIyWlLk6GJQsqaUBKTNV-1">
+          <mxGeometry x="280" y="1380" width="90" height="101" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="zURHsBT0LYJ4qBAqaXF1" name="Course Blocks APIs">
+    <mxGraphModel dx="2074" dy="1239" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="4681" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="def&amp;nbsp;&amp;nbsp;&lt;font style=&quot;font-size: 18px;&quot; color=&quot;#3333ff&quot;&gt;get_course_blocks.&amp;nbsp;&lt;/font&gt;(...)" tooltip="Source: lms/djangoapps/course_blocks/api.py&#xa;&#xa;&#xa;def get_course_blocks(&#xa;        user,&#xa;        starting_block_usage_key,&#xa;        transformers=None,&#xa;        collected_block_structure=None,&#xa;        enable_user_permission_checking=True,&#xa;        exclude_unstarted_blocks=True&#xa;):&#xa;    &quot;&quot;&quot;&#xa;    A higher order function implemented on top of the&#xa;    block_structure.get_blocks function returning a transformed block&#xa;    structure for the given user starting at starting_block_usage_key.&#xa;&#xa;    Arguments:&#xa;        user (django.contrib.auth.models.User) - User object for&#xa;            which the block structure is to be transformed.&#xa;&#xa;        starting_block_usage_key (UsageKey) - Specifies the starting block&#xa;            of the block structure that is to be transformed.&#xa;&#xa;        transformers (BlockStructureTransformers) - A collection of&#xa;            transformers whose transform methods are to be called.&#xa;            If None, get_course_block_access_transformers() is used.&#xa;&#xa;        collected_block_structure (BlockStructureBlockData) - A&#xa;            block structure retrieved from a prior call to&#xa;            BlockStructureManager.get_collected.  Can be optionally&#xa;            provided if already available, for optimization.&#xa;&#xa;        enable_user_permission_checking (Boolean) - If `False` then we consider to hide&#xa;            some blocks for `Staff` users. Because they can access these&#xa;            blocks even they didn&#39;t select the cohort linked language ( Multilingual Course / Language Cohorts ).&#xa;            So, the value should be `False` for grading calculation function.&#xa;&#xa;    Returns:&#xa;        BlockStructureBlockData - A transformed block structure,&#xa;            starting at starting_block_usage_key, that has undergone the&#xa;            transform methods for the given user and the course&#xa;            associated with the block structure.  If using the default&#xa;            transformers, the transformed block structure will be&#xa;            exactly equivalent to the blocks that the given user has&#xa;            access.&#xa;    &quot;&quot;&quot;&#xa;    if not transformers:&#xa;        transformers = BlockStructureTransformers(&#xa;            get_course_block_access_transformers(enable_user_permission_checking, exclude_unstarted_blocks))&#xa;    transformers.usage_info = CourseUsageInfo(starting_block_usage_key.course_key, user)&#xa;&#xa;    return get_block_structure_manager(starting_block_usage_key.course_key).get_transformed(&#xa;        transformers,&#xa;        starting_block_usage_key,&#xa;        collected_block_structure,&#xa;    )&#xa;" id="RghaUDkGFwAiALjMJzUJ-1">
+          <mxCell style="swimlane;childLayout=stackLayout;horizontal=1;fillColor=none;horizontalStack=1;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;strokeColor=none;stackBorder=10;stackSpacing=-12;resizable=1;align=center;points=[];whiteSpace=wrap;html=1;" vertex="1" parent="1">
+            <mxGeometry x="30" y="30" width="546" height="140" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="1)&lt;b&gt; &lt;font color=&quot;#3333ff&quot;&gt;get_block_structure_manager&lt;/font&gt;&lt;/b&gt;(course_key) :&amp;nbsp;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;BlockStructureManager&lt;/span&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left;&quot;&gt;2)&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;text-align: left; background-color: initial;&quot;&gt;&lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;BlockStructureManager&lt;/font&gt;&lt;/b&gt;.&lt;/span&gt;&lt;span style=&quot;text-align: left; background-color: initial;&quot;&gt;&lt;b&gt;get_transformed&lt;/b&gt;(transformers&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;text-align: left; background-color: initial;&quot;&gt;, starting_block_usage_key, collected_block_structure)&lt;/span&gt;&lt;/div&gt;" tooltip="Source : openedx/core/djangoapps/content/block_structure/api.py&#xa;&#xa;def get_block_structure_manager(course_key):&#xa;    &quot;&quot;&quot;&#xa;    Returns the manager for managing Block Structures for the given course.&#xa;    &quot;&quot;&quot;&#xa;    store = modulestore()&#xa;    course_usage_key = store.make_course_usage_key(course_key)&#xa;    return BlockStructureManager(course_usage_key, store, get_cache())&#xa;&#xa;" id="RghaUDkGFwAiALjMJzUJ-2">
+          <mxCell style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" vertex="1" parent="RghaUDkGFwAiALjMJzUJ-1">
+            <mxGeometry x="10" y="33" width="350" height="97" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="RghaUDkGFwAiALjMJzUJ-3" value="Step 2" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" vertex="1" parent="RghaUDkGFwAiALjMJzUJ-1">
+          <mxGeometry x="348" y="33" width="100" height="97" as="geometry" />
+        </mxCell>
+        <mxCell id="RghaUDkGFwAiALjMJzUJ-4" value="Step 3" style="shape=step;perimeter=stepPerimeter;fixedSize=1;points=[];whiteSpace=wrap;html=1;" vertex="1" parent="RghaUDkGFwAiALjMJzUJ-1">
+          <mxGeometry x="436" y="33" width="100" height="97" as="geometry" />
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;class&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;BlockStructureManager&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ root_block_usage_key: UsageKey&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ store:&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;BlockStructureStore&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ modulestore:&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;MixedModuleStore&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &lt;b&gt;&lt;font color=&quot;#3333ff&quot;&gt;get_transformed&lt;/font&gt;&lt;/b&gt;(...):&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;BlockStructureBlockData&lt;/span&gt;&lt;/p&gt;" tooltip="Source : openedx/core/djangoapps/content/block_structure/manager.py" id="RghaUDkGFwAiALjMJzUJ-5">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="70" y="230" width="280" height="130" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="RghaUDkGFwAiALjMJzUJ-6" value="&lt;b&gt;&lt;font color=&quot;#ff3333&quot;&gt;Use&lt;/font&gt;&lt;/b&gt;" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.49;exitY=1.053;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RghaUDkGFwAiALjMJzUJ-2" target="RghaUDkGFwAiALjMJzUJ-5">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="198" y="170" as="sourcePoint" />
+            <mxPoint x="358" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <UserObject label="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;class&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial; text-align: left;&quot;&gt;&lt;b&gt;BlockStructureStore&lt;/b&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ _cache: django.cache&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ method(): Type&lt;/p&gt;" tooltip="Source : openedx/core/djangoapps/content/block_structure/store.py" id="RghaUDkGFwAiALjMJzUJ-7">
+          <mxCell style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+            <mxGeometry x="77" y="430" width="250" height="90" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="RghaUDkGFwAiALjMJzUJ-8" value="Use" style="endArrow=open;endSize=12;dashed=1;html=1;rounded=0;exitX=0.472;exitY=1.008;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="RghaUDkGFwAiALjMJzUJ-5" target="RghaUDkGFwAiALjMJzUJ-7">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="234" y="400" as="sourcePoint" />
+            <mxPoint x="394" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
